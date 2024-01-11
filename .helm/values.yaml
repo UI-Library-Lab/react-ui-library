@@ -1,0 +1,29 @@
+# We are using generic chart to deploy the service
+# You can find the generic chart on: https://github.com/devopshobbies/helm-generic
+# Access to values.yml file and you will see what you can use.
+
+applicationName: "uiLibrary-storybook"
+deployment:
+  enabled: true
+  image:
+    repository: devopshobbies/uiLibrary-storybook
+    tag: "latest"
+    imagePullPolicy: Always
+
+  containerSecurityContext:
+    readOnlyRootFilesystem: true
+    runAsNonRoot: true
+
+  ports:
+    - containerPort: 80
+      name: http
+      protocol: TCP
+
+service:
+  ports:
+    - port: 80
+      name: http
+      protocol: TCP
+      targetPort: 80
+      nodePort: 30004
+  type: NodePort

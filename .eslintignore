@@ -1,0 +1,14 @@
+/node_modules
+/public
+/setupTests.ts
+/dist
+/storybook-static
+/.storybook/main.cjs
+vite.config.ts
+.eslintrc.js
+/build
+/src/vite-env.d.ts
+postcss.config.cjs
+fileMock.js
+jest.config.js
+/src/styled.d.ts

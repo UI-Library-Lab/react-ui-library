@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /*-----Color-----*/
+  /* Base */
+  --uiLibrary-color-white: rgb(255, 255, 255);
+  --uiLibrary-color-black: rgb(0, 0, 0);
+  /* Gray */
+  --uiLibrary-color-gray-50: rgb(250, 250, 250);
+  --uiLibrary-color-gray-100: rgb(244, 244, 245);
+  --uiLibrary-color-gray-200: rgb(228, 228, 231);
+  --uiLibrary-color-gray-300: rgb(212, 212, 216);
+  --uiLibrary-color-gray-400: rgb(161, 161, 170);
+  --uiLibrary-color-gray-500: rgb(113, 113, 122);
+  --uiLibrary-color-gray-600: rgb(82, 82, 91);
+  --uiLibrary-color-gray-700: rgb(63, 63, 70);
+  --uiLibrary-color-gray-800: rgb(39, 39, 42);
+  --uiLibrary-color-gray-900: rgb(24, 24, 27);
+  /* Primary */
+  --uiLibrary-color-primary-25: rgb(245, 248, 255);
+  --uiLibrary-color-primary-50: rgb(235, 241, 255);
+  --uiLibrary-color-primary-100: rgb(204, 221, 255);
+  --uiLibrary-color-primary-200: rgb(179, 204, 255);
+  --uiLibrary-color-primary-300: rgb(133, 173, 255);
+  --uiLibrary-color-primary-400: rgb(73, 133, 253);
+  --uiLibrary-color-primary-500: rgb(38, 110, 253);
+  --uiLibrary-color-primary-600: rgb(5, 74, 235);
+  --uiLibrary-color-primary-700: rgb(8, 58, 196);
+  --uiLibrary-color-primary-800: rgb(15, 46, 138);
+  --uiLibrary-color-primary-900: rgb(15, 33, 87);
+  /* Secondary */
+  --uiLibrary-color-secondary-50: rgb(246, 245, 255);
+  --uiLibrary-color-secondary-100: rgb(234, 230, 255);
+  --uiLibrary-color-secondary-200: rgb(219, 210, 254);
+  --uiLibrary-color-secondary-300: rgb(197, 181, 252);
+  --uiLibrary-color-secondary-400: rgb(161, 128, 249);
+  --uiLibrary-color-secondary-500: rgb(128, 85, 246);
+  --uiLibrary-color-secondary-600: rgb(120, 71, 235);
+  --uiLibrary-color-secondary-700: rgb(112, 55, 225);
+  --uiLibrary-color-secondary-800: rgb(80, 31, 178);
+  --uiLibrary-color-secondary-900: rgb(64, 30, 133);
+  /* Success */
+  --uiLibrary-color-success-50: rgb(242, 253, 245);
+  --uiLibrary-color-success-100: rgb(222, 252, 233);
+  --uiLibrary-color-success-200: rgb(187, 247, 208);
+  --uiLibrary-color-success-300: rgb(133, 239, 172);
+  --uiLibrary-color-success-400: rgb(74, 222, 128);
+  --uiLibrary-color-success-500: rgb(26, 192, 87);
+  --uiLibrary-color-success-600: rgb(22, 162, 73);
+  --uiLibrary-color-success-700: rgb(21, 127, 60);
+  --uiLibrary-color-success-800: rgb(28, 113, 60);
+  --uiLibrary-color-success-900: rgb(17, 76, 41);
+  /* Warning */
+  --uiLibrary-color-warning-50: rgb(254, 252, 231);
+  --uiLibrary-color-warning-100: rgb(254, 249, 195);
+  --uiLibrary-color-warning-200: rgb(254, 240, 139);
+  --uiLibrary-color-warning-300: rgb(253, 223, 73);
+  --uiLibrary-color-warning-400: rgb(250, 204, 20);
+  --uiLibrary-color-warning-500: rgb(231, 176, 8);
+  --uiLibrary-color-warning-600: rgb(200, 138, 4);
+  --uiLibrary-color-warning-700: rgb(162, 97, 7);
+  --uiLibrary-color-warning-800: rgb(134, 78, 14);
+  --uiLibrary-color-warning-900: rgb(115, 63, 18);
+  /* Error */
+  --uiLibrary-color-error-25: rgb(255, 250, 250);
+  --uiLibrary-color-error-50: rgb(254, 241, 241);
+  --uiLibrary-color-error-100: rgb(254, 225, 225);
+  --uiLibrary-color-error-200: rgb(254, 200, 200);
+  --uiLibrary-color-error-300: rgb(252, 166, 166);
+  --uiLibrary-color-error-400: rgb(253, 107, 107);
+  --uiLibrary-color-error-500: rgb(239, 67, 67);
+  --uiLibrary-color-error-600: rgb(220, 40, 40);
+  --uiLibrary-color-error-700: rgb(186, 28, 28);
+  --uiLibrary-color-error-800: rgb(152, 27, 27);
+  --uiLibrary-color-error-900: rgb(129, 29, 29);
+
+
+  /*-----Font-----*/
+    /*Font-family*/
+    --kasier-font-family: 'Inter', sans-serif;
+    /* Font-size */
+    --uiLibrary-text-size-xs: 0.75rem;
+    /* 12px */
+    --uiLibrary-text-size-sm: 0.875rem;
+    /* 14px */
+    --uiLibrary-text-size-md: 1rem;
+    /* 16px */
+    --uiLibrary-text-size-lg: 1.125rem;
+    /* 18px */
+    --uiLibrary-text-size-xl: 1.25rem;
+    /* 20px */
+    --uiLibrary-display-size-xs: 1.5rem;
+    /* 24px */
+    --uiLibrary-display-size-sm: 1.875rem;
+    /* 30px */
+    --uiLibrary-display-size-md: 2.25rem;
+    /* 36px */
+    --uiLibrary-display-size-lg: 3rem;
+    /* 48px */
+    --uiLibrary-display-size-xl: 3.75rem;
+    /* 60px */
+    --uiLibrary-display-size-2xl: 4.5rem;
+    /* 72px */
+    /* Line-height*/
+    --uiLibrary-line-height-text-xs: 1.125rem;
+    /* 18px */
+    --uiLibrary-line-height-text-sm: 1.25rem;
+    /* 20px */
+    --uiLibrary-line-height-text-md: 1.5rem;
+    /* 24px */
+    --uiLibrary-line-height-text-lg: 1.75rem;
+    /* 28px */
+    --uiLibrary-line-height-text-xl: 2rem;
+    /* 32px */
+    --uiLibrary-line-height-display-xs: 2rem;
+    /* 32px */
+    --uiLibrary-line-height-display-sm: 2.375rem;
+    /* 38px */
+    --uiLibrary-line-height-display-md: 2.75rem;
+    /* 44px */
+    --uiLibrary-line-height-display-lg: 3.75rem;
+    /* 60px */
+    --uiLibrary-line-height-display-xl: 4.5rem;
+    /* 72px */
+    --uiLibrary-line-height-display-2xl: 5.625rem;
+    /* 90px */
+    /* Letter-spacing */
+    --uiLibrary-letter-spacing: -0.02rem;
+    /* Font-weight */
+    --uiLibrary-font-regular: 400;
+    --uiLibrary-font-medium: 500;
+    --uiLibrary-font-semibold: 600;
+    --uiLibrary-font-bold: 700;
+
+
+  /*----- Shadow -----*/
+    --uiLibrary-shadow-xs: 0px 1px 3px rgba(16, 24, 40, 0.06);
+    --uiLibrary-shadow-sm: 0px 1px 4px rgba(16, 24, 40, 0.08), 0px 1px 3px rgba(16, 24, 40, 0.08);
+    --uiLibrary-shadow-md: 0px 4px 8px -1px rgba(16, 24, 40, 0.08), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+    --uiLibrary-shadow-lg: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 8px -3px rgba(16, 24, 40, 0.04);
+    --uiLibrary-shadow-xl: 0px 20px 24px -4px rgba(16, 24, 40, 0.1), 0px 8px 10px -2px rgba(16, 24, 40, 0.02);
+    --uiLibrary-shadow-2xl: 0px 26px 50px -14px rgba(16, 24, 40, 0.2);
+    --uiLibrary-shadow-3xl: 0px 28px 60px -14px rgba(16, 24, 40, 0.16);
+  
+    /*----- Blur -----*/
+    --uiLibrary-blur-sm: 2px;
+    --uiLibrary-blur-md: 4px;
+    --uiLibrary-blur-lg: 6px;
+    --uiLibrary-blur-xl: 10px;
+}
+
+* [class*="uiLibrary"] {
+  font-family: var(--kasier-font-family) !important;
+  letter-spacing: var(--uiLibrary-letter-spacing);
+}
