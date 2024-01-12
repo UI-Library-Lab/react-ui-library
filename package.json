@@ -1,5 +1,5 @@
 {
-  "name": "ui-library-storybook",
+  "name": "@ui-library-lab/ui-library-storybook",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
@@ -36,6 +36,9 @@
     "uiLibrary"
   ],
   "license": "MIT",
+  "resolutions": {
+    "strip-ansi": "6.0.1"
+  },
   "dependencies": {
     "@types/jest": "^29.5.1",
     "react": "^18.2.0",
