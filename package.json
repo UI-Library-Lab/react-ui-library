@@ -7,20 +7,8 @@
     "storybook": "storybook dev -p 6006 --no-open",
     "build-storybook": "storybook build",
     "build": "tsc && vite build",
-    "prepare": "husky install",
     "test": "jest",
     "tsc": "tsc"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "ts-lint"
-    },
-    "ts-lint": {
-      "src/**/*.{js,jsx,ts,tsx}": [
-        "yarn tsc",
-        "yarn lint"
-      ]
-    }
   },
   "files": [
     "dist"
@@ -91,7 +79,6 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-storybook": "^0.6.13",
     "html-webpack-plugin": "^5.5.3",
-    "husky": "^8.0.0",
     "postcss": "^8.4.23",
     "prettier": "^2.8.4",
     "prettier-eslint": "^15.0.1",
