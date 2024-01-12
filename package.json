@@ -1,7 +1,8 @@
 {
-  "name": "@ui-library-lab/ui-library-storybook",
+  "name": "@ui-library-lab/ui-library",
   "version": "0.0.1",
   "type": "module",
+  "private": false,
   "scripts": {
     "lint": "eslint --fix --ignore-path .eslintignore --ignore-pattern \"!**/.*\" .",
     "storybook": "storybook dev -p 6006 --no-open",
