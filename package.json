@@ -1,5 +1,5 @@
 {
-  "name": "ui-library-storybook",
+  "name": "@ui-library-lab/ui-library-storybook",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
