@@ -2,6 +2,7 @@
   "name": "@ui-library-lab/ui-library-storybook",
   "version": "0.1.3",
   "type": "module",
+  "private": false,
   "scripts": {
     "lint": "eslint --fix --ignore-path .eslintignore --ignore-pattern \"!**/.*\" .",
     "storybook": "storybook dev -p 6006 --no-open",
