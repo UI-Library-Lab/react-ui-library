@@ -1,0 +1,63 @@
+name: CD main publish
+
+on:
+  push: 
+    branches: 
+      - main
+      
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+permissions:
+  contents: write
+  pull-requests: write
+  
+jobs:
+ 
+  publish:
+    runs-on: ubuntu-latest
+    
+    outputs:
+      npmVersion: ${{ steps.get-version.outputs.version }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab
+      
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      
+      - name: Get npm version
+        id: get-version
+        uses: beaconbrigade/package-json-version@v0.3
+        with:
+          path: .
+      
+      - name: Print the version
+        run: echo "The version was ${{ steps.get-version.outputs.version }}"
+
+      - name: Install dependencies
+        run: yarn
+      
+      - name: NPM Publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+
+  release:
+    needs: publish
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Tag commit
+        uses: tvdias/github-tagger@v0.0.1
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          tag: ${{ needs.publish.outputs.npmVersion }}
+
+
+      
+
+
+
+

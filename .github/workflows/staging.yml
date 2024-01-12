@@ -1,0 +1,105 @@
+name: Staging
+
+on:
+  pull_request: 
+    types: 
+      - closed
+    branches: 
+      - develop
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  bump-version:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    permissions: write-all
+  
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab
+      
+      - name: branch name
+        id: get-branch-name
+        run: echo  "branch-prefix=$(echo ${GITHUB_HEAD_REF} | sed 's/\(^\w\+\)\/.*/\1/')" >> $GITHUB_OUTPUT
+
+      - name: get prefix
+        run: echo ${{steps.get-branch-name.outputs.branch-prefix}}
+
+      - name: Version Bump
+        id: bump
+        run: |
+          if [ "${{ steps.get-branch-name.outputs.branch-prefix }}" == "feature" ]
+          then
+            npm version minor --force --no-git-tag-version
+            echo "Bumping version: minor"
+            echo "bumped-version=minor" >> $GITHUB_OUTPUT
+          elif  [ "${{ steps.get-branch-name.outputs.branch-prefix }}" == "fix" ] 
+          then
+            npm version patch --force --no-git-tag-version
+            echo "Bumping version: patch"
+            echo "bumped-version=patch" >> $GITHUB_OUTPUT
+          elif  [ "${{ steps.get-branch-name.outputs.branch-prefix }}" == "change" ] 
+          then
+            npm version major --force --no-git-tag-version
+            echo "Bumping version: major"
+            echo "bumped-version=major" >> $GITHUB_OUTPUT
+          else
+            echo "No version bump needed for this branch as its prefix is ${{ steps.get-branch-name.outputs.branch-prefix }}"
+            echo "bumped-version=null" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit version change
+        if: steps.bump.outputs.bumped-version != null
+        continue-on-error: true
+        run: |
+          git config --local user.email "$(git log -n 1 --pretty=format:%ae)"
+          git config --local user.name "$(git log -n 1 --pretty=format:%an)"
+          git add package.json
+          git commit -m "Bump version ${{ steps.bump.outputs.bumped-version }}"
+
+      - name: Push changes
+        if: steps.bump.outputs.bumped-version != null 
+        continue-on-error: true
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+
+  storybook-deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: "pages"
+      cancel-in-progress: false
+
+    environment:
+      name: github-pages
+      url: ${{ steps.build-publish.outputs.page_url }}
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: build
+        run: yarn build
+        
+      - name: Pre Deploy
+        run: yarn predeploy
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: "./storybook-static"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+      
