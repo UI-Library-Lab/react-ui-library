@@ -1,6 +1,6 @@
 {
-  "name": "@ui-library-lab/ui-library",
-  "version": "0.0.1",
+  "name": "@ui-library-lab/ui-library-storybook",
+  "version": "0.1.3",
   "type": "module",
   "private": false,
   "scripts": {
