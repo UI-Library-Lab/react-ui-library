@@ -9,9 +9,21 @@ export namespace NTypographyConfigs {
     fontFamily: string;
     letterSpacing: string;
     fontWight: {
+      /**
+       * 400
+       */
       normal: number;
+      /**
+       * 500
+       */
       medium: number;
+      /**
+       * 600
+       */
       semibold: number;
+      /**
+       * 700
+       */
       bold: number;
     };
     fontSize: {

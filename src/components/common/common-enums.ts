@@ -5,10 +5,3 @@ export enum Sizes {
   XLARGE = 'XLarge',
   XXLARGE = 'XXLarge',
 }
-
-export enum State {
-  DEFUALT = 'Default',
-  HOVER = 'Hover',
-  FOCUSED = 'Focused',
-  DISABLED = 'Disabled',
-}

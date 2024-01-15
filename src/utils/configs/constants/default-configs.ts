@@ -84,7 +84,7 @@ const paletteConfig = {
 };
 /* ------------------------------- Typography ------------------------------- */
 const typographyConfig = {
-  fontFamily: '"Inter", "sans-serif"',
+  fontFamily: "'Inter', sans-serif;",
   letterSpacing: '-0.02rem',
   fontWight: {
     normal: 400,

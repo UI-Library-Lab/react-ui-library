@@ -1,18 +1,38 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import {
+  commonTransition,
+  commonTypography,
+} from '~/components/common/common-styles';
 import { IButtonProps } from '~/components/inputs/button/i-button-props';
 
 /* -------------------------------- interface ------------------------------- */
 type IStyledButton = Omit<IButtonProps, 'ref'>;
 /* ------------------------------- implements ------------------------------- */
+
+const primaryButtonType = css<IStyledButton>`
+  background-color: ${({ theme, disabled }) =>
+    theme.palette.primary[disabled ? 100 : 500]};
+  &:hover {
+    background-color: ${({ theme }) => theme.palette.primary[600]};
+  }
+
+  &:focus {
+    background-color: ${({ theme }) => theme.palette.primary[500]};
+  }
+
+  &:disabled {
+    background-color: ${({ theme }) => theme.palette.primary[100]};
+  }
+`;
+
 export const StyledButton = styled.button<IStyledButton>`
-  transition: all 0.2s;
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  ${commonTypography}
+  ${commonTransition}
+  ${primaryButtonType}
   border: 0;
-  border-radius: 3em;
-  cursor: pointer;
+  border-radius: ${({ theme }) => theme.spacing[1]};
+  cursor: ${({ disabled }) => (disabled ? 'auto' : 'pointer')};
   display: inline-block;
-  line-height: 1;
   color: ${({ theme }) => theme.palette.text.primary};
-  background: ${({ theme }) => theme.palette.background};
+  padding: ${({ theme }) => theme.spacing[4]};
 `;

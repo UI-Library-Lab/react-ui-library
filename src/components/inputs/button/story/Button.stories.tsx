@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { ButtonTypes } from '~/components/inputs/button/i-button-props';
-import { Sizes, State } from '~/components/common/common-enums';
+import { Sizes } from '~/components/common/common-enums';
 import button from '~/components/inputs/button/button';
 
 export default {
@@ -17,16 +17,15 @@ export default {
     destructive: false,
     types: ButtonTypes.PRIMARY,
     size: Sizes.MEDIUM,
-    state: State.DEFUALT,
+    disabled: false,
   },
   argTypes: {
+    disabled: {
+      control: 'boolean',
+    },
     types: {
       control: 'radio',
       options: Object.values(ButtonTypes),
-    },
-    state: {
-      conrol: 'radio',
-      options: Object.values(State),
     },
     size: {
       control: 'radio',

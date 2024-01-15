@@ -1,5 +1,5 @@
 import ICommonProps from '~/components/common/common-props';
-import { Sizes, State } from '~/components/common/common-enums';
+import { Sizes } from '~/components/common/common-enums';
 import { ReactNode } from 'react';
 
 /* ---------------------------------- Enums --------------------------------- */
@@ -29,10 +29,6 @@ export interface IButtonProps extends ICommonProps<HTMLButtonElement> {
    */
   size?: Sizes;
   /**
-   * User interaction state with the button
-   */
-  state?: State;
-  /**
    * Button contents
    */
   label: string;
@@ -48,4 +44,8 @@ export interface IButtonProps extends ICommonProps<HTMLButtonElement> {
    * Is error shape
    */
   destructive?: boolean;
+  /**
+   * Is button disabled?
+   */
+  disabled?: boolean;
 }
