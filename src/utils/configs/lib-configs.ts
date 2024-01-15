@@ -1,4 +1,4 @@
-import { defaultConfigs, paletteModes } from './constants/defaultConfigs';
+import { defaultConfigs, paletteModes } from './constants/default-configs';
 import { IUiLibraryTheme, NPaletteConfigs } from './protocols';
 /* ------------------------------ light palette ----------------------------- */
 /**

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { IButtonVM } from './prototype/ButtonProto';
+import { IButtonProps } from '~/components/inputs/button/i-button-props';
 
 /* -------------------------------- interface ------------------------------- */
-type IStyledButton = Pick<IButtonVM, 'size' | 'primary'>;
+type IStyledButton = Omit<IButtonProps, 'ref'>;
 /* ------------------------------- implements ------------------------------- */
 export const StyledButton = styled.button<IStyledButton>`
   transition: all 0.2s;
@@ -15,6 +15,4 @@ export const StyledButton = styled.button<IStyledButton>`
   line-height: 1;
   color: ${({ theme }) => theme.palette.text.primary};
   background: ${({ theme }) => theme.palette.background};
-  box-shadow: ${({ primary, theme }) =>
-    primary ? theme.shadow.md : theme.shadow.md};
 `;

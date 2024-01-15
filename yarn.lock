@@ -2884,6 +2884,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-designs@npm:^7.0.9":
+  version: 7.0.9
+  resolution: "@storybook/addon-designs@npm:7.0.9"
+  dependencies:
+    "@figspec/react": "npm:^1.0.0"
+  peerDependencies:
+    "@storybook/addon-docs": ^7.0.0
+    "@storybook/addons": ^7.0.0
+    "@storybook/components": ^7.0.0
+    "@storybook/manager-api": ^7.0.0
+    "@storybook/preview-api": ^7.0.0
+    "@storybook/theming": ^7.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: e27528e64a9bb21cd194d6940d852d88828ca6b2e473b9fa69ac8d4446322935bf73286d98d22bdd6316937db176a1295a6befd1ba4a8021105b5eebb4099950
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-docs@npm:7.6.7":
   version: 7.6.7
   resolution: "@storybook/addon-docs@npm:7.6.7"
@@ -4420,6 +4443,7 @@ __metadata:
     "@babel/preset-env": "npm:^7.20.2"
     "@babel/preset-react": "npm:^7.18.6"
     "@babel/preset-typescript": "npm:^7.21.0"
+    "@storybook/addon-designs": "npm:^7.0.9"
     "@storybook/addon-essentials": "npm:7.6.7"
     "@storybook/addon-interactions": "npm:7.6.7"
     "@storybook/addon-links": "npm:7.6.7"

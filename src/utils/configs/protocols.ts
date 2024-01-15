@@ -1,4 +1,4 @@
-import { paletteModes } from './constants/defaultConfigs';
+import { paletteModes } from './constants/default-configs';
 /* -------------------------- Typography -------------------------- */
 export namespace NTypographyConfigs {
   export type FontConfig = {

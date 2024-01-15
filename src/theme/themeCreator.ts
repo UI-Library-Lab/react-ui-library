@@ -1,4 +1,4 @@
-import { defaultTheme } from '~/utils/configs/libConfigs';
+import { defaultTheme } from '~/utils/configs/lib-configs';
 import {
   ICustomUiLibraryTheme,
   IUiLibraryTheme,

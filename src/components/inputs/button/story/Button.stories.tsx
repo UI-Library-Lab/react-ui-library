@@ -1,40 +1,46 @@
-import { ComponentMeta } from '@storybook/react';
-import Button from '../Button';
-import { Template } from './Template';
+import { Meta, StoryObj } from '@storybook/react';
+import { ButtonTypes } from '~/components/inputs/button/i-button-props';
+import { Sizes, State } from '~/components/common/common-enums';
+import button from '~/components/inputs/button/button';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Input/Button',
-  component: Button,
+  component: button,
   parameters: {
-    // Adding Figma to Storybook
     design: {
       type: 'figma',
-      url: import.meta.env.STORYBOOK_FIGMA_URL,
+      url: 'https://www.figma.com/file/DD3GQCNDXjQaaXApTxmfES/Jinex-Design-System-(Code)?type=design&node-id=2-18000&mode=design&t=dhI8p1bAV000t9J2-4',
     },
   },
-} as ComponentMeta<typeof Button>;
+  args: {
+    label: 'Default Label',
+    destructive: false,
+    types: ButtonTypes.PRIMARY,
+    size: Sizes.MEDIUM,
+    state: State.DEFUALT,
+  },
+  argTypes: {
+    types: {
+      control: 'radio',
+      options: Object.values(ButtonTypes),
+    },
+    state: {
+      conrol: 'radio',
+      options: Object.values(State),
+    },
+    size: {
+      control: 'radio',
+      options: Object.values(Sizes),
+    },
+    label: {
+      type: 'string',
+    },
+    destructive: {
+      defaultValue: false,
+      description: 'Danger state or not',
+      type: 'boolean',
+    },
+  },
+} as Meta<typeof button>;
 
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: true,
-  label: 'Button',
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+export const Primary: StoryObj<Meta> = {};
