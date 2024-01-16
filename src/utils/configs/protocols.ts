@@ -48,6 +48,7 @@ export namespace NTypographyConfigs {
 /* --------------------------- Palettes --------------------------- */
 export namespace NPaletteConfigs {
   export type ColorConfigs = {
+    25?: string;
     50: string;
     100: string;
     200: string;

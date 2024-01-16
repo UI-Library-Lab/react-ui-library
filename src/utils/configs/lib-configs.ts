@@ -66,6 +66,7 @@ export const defaultTheme: IUiLibraryTheme = {
       900: defaultConfigs.palette.gray[900],
     },
     primary: {
+      25: defaultConfigs.palette.primary[25],
       50: defaultConfigs.palette.primary[50],
       100: defaultConfigs.palette.primary[100],
       200: defaultConfigs.palette.primary[200],

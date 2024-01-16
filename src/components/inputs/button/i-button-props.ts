@@ -21,13 +21,13 @@ export interface IButtonProps extends ICommonProps<HTMLButtonElement> {
    *
    * Default: Primary
    */
-  types?: ButtonTypes;
+  types?: `${ButtonTypes}`;
   /**
    * How large should the button be?
    *
    * Default: MEDIUM
    */
-  size?: Sizes;
+  size?: `${Sizes}`;
   /**
    * Button contents
    */
