@@ -158,6 +158,20 @@ const linkButtonType = css<IStyledButton>`
     color: ${({ theme }) => theme.palette.gray[300]};
   }
 `;
+
+const linkGrayButtonType = css<IStyledButton>`
+  background-color: ${({ theme }) => theme.palette.background};
+  color: ${({ theme }) => theme.palette.gray[600]};
+  border: 0;
+
+  &:hover {
+    color: ${({ theme }) => theme.palette.gray[700]};
+  }
+
+  &:disabled {
+    color: ${({ theme }) => theme.palette.gray[300]};
+  }
+`;
 const buttonTypeStyle = {
   [ButtonTypes.PRIMARY]: primaryButtonType,
   [ButtonTypes.SECONDARY]: secondaryButtonType,
@@ -166,6 +180,7 @@ const buttonTypeStyle = {
   [ButtonTypes.GHOST]: ghostButtonType,
   [ButtonTypes.GHOST_GRAY]: ghostGrayButtonType,
   [ButtonTypes.LINK]: linkButtonType,
+  [ButtonTypes.LINK_GRAY]: linkGrayButtonType,
 } as Record<
   `${ButtonTypes}`,
   FlattenInterpolation<ThemedStyledProps<IStyledButton, DefaultTheme>>
