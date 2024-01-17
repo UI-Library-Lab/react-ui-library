@@ -26,6 +26,7 @@ const primaryButtonType = css<IStyledButton>`
   background-color: ${({ theme, disabled }) =>
     theme.palette.primary[disabled ? 100 : 500]};
   color: ${({ theme }) => theme.palette.base.white};
+  border: 0;
 
   &:hover {
     background-color: ${({ theme }) => theme.palette.primary[600]};
@@ -46,6 +47,7 @@ const secondaryButtonType = css<IStyledButton>`
   background-color: ${({ theme, disabled }) =>
     theme.palette.primary[disabled ? 25 : 50]};
   color: ${({ theme }) => theme.palette.primary[500]};
+  border: 0;
 
   &:hover {
     background-color: ${({ theme }) => theme.palette.primary[100]};
@@ -66,6 +68,7 @@ const secondaryButtonType = css<IStyledButton>`
 const tertiaryButtonType = css<IStyledButton>`
   background-color: transparent;
   color: ${({ theme }) => theme.palette.primary[500]};
+  border: 0;
 
   &:hover {
     background-color: ${({ theme }) => theme.palette.primary[50]};
@@ -194,6 +197,6 @@ export const StyledButton = styled.button<IStyledButton>`
   border-radius: ${({ theme }) => theme.spacing[1]};
   cursor: ${({ disabled }) => (disabled ? 'auto' : 'pointer')};
   display: inline-block;
-  padding: ${({ theme }) => theme.spacing[4]};
+  padding: ${({ theme }) => `${theme.spacing[3]} ${theme.spacing[8]}`};
 `;
 /* -------------------------------------------------------------------------- */
