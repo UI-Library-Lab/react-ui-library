@@ -7,10 +7,12 @@ import { StyledButton } from './style';
  * Primary UI component for user interaction
  */
 const Button = (props: IButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
-  const { label } = props;
+  const { label, LeadingIcon, TrailingIcon } = props;
   return (
     <StyledButton {...props} ref={ref}>
+      {LeadingIcon}
       {label}
+      {TrailingIcon}
     </StyledButton>
   );
 };

@@ -196,7 +196,8 @@ export const StyledButton = styled.button<IStyledButton>`
   ${({ types }) => types && buttonTypeStyle[types]}
   border-radius: ${({ theme }) => theme.spacing[1]};
   cursor: ${({ disabled }) => (disabled ? 'auto' : 'pointer')};
-  display: inline-block;
+  display: inline-flex;
+  gap: ${({ theme }) => theme.spacing[3]};
   padding: ${({ theme }) => `${theme.spacing[3]} ${theme.spacing[8]}`};
 `;
 /* -------------------------------------------------------------------------- */

@@ -1,11 +1,15 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ButtonTypes } from '~/components/inputs/button/i-button-props';
+import {
+  ButtonTypes,
+  IButtonProps,
+} from '~/components/inputs/button/i-button-props';
 import { Sizes } from '~/components/common/common-enums';
-import button from '~/components/inputs/button/button';
+import Button from '~/components/inputs/button/button';
+import { Circle } from '~/components/icons';
 
 export default {
   title: 'Input/Button',
-  component: button,
+  component: Button,
   parameters: {
     design: {
       type: 'figma',
@@ -40,6 +44,16 @@ export default {
       type: 'boolean',
     },
   },
-} as Meta<typeof button>;
+} as Meta<typeof Button>;
 
-export const Primary: StoryObj<Meta> = {};
+export const Primary: StoryObj<Meta> = {
+  render: (props) => {
+    return (
+      <Button
+        {...(props as IButtonProps)}
+        LeadingIcon={<Circle />}
+        TrailingIcon={<Circle />}
+      />
+    );
+  },
+};
