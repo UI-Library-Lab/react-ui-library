@@ -82,10 +82,75 @@ const tertiaryButtonType = css<IStyledButton>`
     color: ${({ theme }) => theme.palette.gray[300]};
   }
 `;
+
+const tertiaryGrayButtonType = css<IStyledButton>`
+  background-color: transparent;
+  color: ${({ theme }) => theme.palette.gray[600]};
+  border: 0;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.palette.gray[50]};
+  }
+
+  &:disabled {
+    background-color: ${({ theme }) => theme.palette.base.white};
+    color: ${({ theme }) => theme.palette.gray[300]};
+  }
+`;
+
+const ghostButtonType = css<IStyledButton>`
+  background-color: ${({ theme }) => theme.palette.background};
+  color: ${({ theme }) => theme.palette.primary[600]};
+  border: 1px solid;
+  border-color: ${({ theme }) => theme.palette.primary[400]};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.palette.primary[25]};
+    border-color: ${({ theme }) => theme.palette.primary[500]};
+  }
+
+  &:focus {
+    box-shadow: ${({ theme }) =>
+      `0px 0px 0px 4px ${theme.palette.primary[100]}`};
+    border-color: ${({ theme }) => theme.palette.primary[400]};
+  }
+
+  &:disabled {
+    background-color: ${({ theme }) => theme.palette.background};
+    color: ${({ theme }) => theme.palette.primary[200]};
+    border-color: ${({ theme }) => theme.palette.primary[200]};
+  }
+`;
+
+const ghostGrayButtonType = css<IStyledButton>`
+  background-color: ${({ theme }) => theme.palette.background};
+  color: ${({ theme }) => theme.palette.gray[700]};
+  border: 1px solid;
+  border-color: ${({ theme }) => theme.palette.gray[300]};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.palette.gray[50]};
+    border-color: ${({ theme }) => theme.palette.gray[300]};
+  }
+
+  &:focus {
+    box-shadow: ${({ theme }) => `0px 0px 0px 4px ${theme.palette.gray[100]}`};
+    border-color: ${({ theme }) => theme.palette.gray[300]};
+  }
+
+  &:disabled {
+    background-color: ${({ theme }) => theme.palette.background};
+    color: ${({ theme }) => theme.palette.gray[300]};
+    border-color: ${({ theme }) => theme.palette.gray[200]};
+  }
+`;
 const buttonTypeStyle = {
   [ButtonTypes.PRIMARY]: primaryButtonType,
   [ButtonTypes.SECONDARY]: secondaryButtonType,
   [ButtonTypes.TERTIARY]: tertiaryButtonType,
+  [ButtonTypes.TERTIARY_GRAY]: tertiaryGrayButtonType,
+  [ButtonTypes.GHOST]: ghostButtonType,
+  [ButtonTypes.GHOST_GRAY]: ghostGrayButtonType,
 } as Record<
   `${ButtonTypes}`,
   FlattenInterpolation<ThemedStyledProps<IStyledButton, DefaultTheme>>
@@ -95,8 +160,7 @@ const buttonTypeStyle = {
 export const StyledButton = styled.button<IStyledButton>`
   ${commonTypography}
   ${commonTransition}
-  ${({ types }) => (types ? buttonTypeStyle[types] : '')}
-  border: 0;
+  ${({ types }) => types && buttonTypeStyle[types]}
   border-radius: ${({ theme }) => theme.spacing[1]};
   cursor: ${({ disabled }) => (disabled ? 'auto' : 'pointer')};
   display: inline-block;

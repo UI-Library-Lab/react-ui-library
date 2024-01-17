@@ -5,7 +5,7 @@ import { IUiLibraryTheme, NPaletteConfigs } from './protocols';
  * palette theme for light mode
  */
 export const lightDefaultPalette: NPaletteConfigs.PaletteModes = {
-  mode: paletteModes.DARK,
+  mode: paletteModes.LIGHT,
   action: {
     hover: defaultConfigs.palette.gray[700],
   },
