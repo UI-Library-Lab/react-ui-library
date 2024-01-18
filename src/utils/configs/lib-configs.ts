@@ -115,6 +115,7 @@ export const defaultTheme: IUiLibraryTheme = {
       900: defaultConfigs.palette.warning[900],
     },
     error: {
+      25: defaultConfigs.palette.error[25],
       50: defaultConfigs.palette.error[50],
       100: defaultConfigs.palette.error[100],
       200: defaultConfigs.palette.error[200],

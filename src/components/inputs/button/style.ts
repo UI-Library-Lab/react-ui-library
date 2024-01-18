@@ -51,24 +51,35 @@ const primaryButtonType = css<IStyledButton>`
 `;
 
 const secondaryButtonType = css<IStyledButton>`
-  background-color: ${({ theme, disabled }) =>
-    theme.palette.primary[disabled ? 25 : 50]};
-  color: ${({ theme }) => theme.palette.primary[500]};
+  background-color: ${({ theme, disabled, destructive }) =>
+    destructive
+      ? theme.palette.error[disabled ? 25 : 50]
+      : theme.palette.primary[disabled ? 25 : 50]};
+  color: ${({ theme, destructive }) =>
+    destructive ? theme.palette.error[600] : theme.palette.primary[500]};
   border: 0;
 
   &:hover {
-    background-color: ${({ theme }) => theme.palette.primary[100]};
+    background-color: ${({ theme, destructive }) =>
+      destructive ? theme.palette.error[100] : theme.palette.primary[100]};
+    color: ${({ theme, destructive }) =>
+      destructive ? theme.palette.error[700] : theme.palette.primary[600]};
   }
 
   &:focus {
-    background-color: ${({ theme }) => theme.palette.primary[50]};
-    box-shadow: ${({ theme }) =>
-      `0px 0px 0px 4px ${theme.palette.primary[100]}`};
+    background-color: ${({ theme, destructive }) =>
+      destructive ? theme.palette.error[50] : theme.palette.primary[50]};
+    box-shadow: ${({ theme, destructive }) =>
+      `0px 0px 0px 4px ${
+        destructive ? theme.palette.error[100] : theme.palette.primary[100]
+      }`};
   }
 
   &:disabled {
-    background-color: ${({ theme }) => theme.palette.primary[25]};
-    color: ${({ theme }) => theme.palette.primary[300]};
+    background-color: ${({ theme, destructive }) =>
+      destructive ? theme.palette.error[25] : theme.palette.primary[25]};
+    color: ${({ theme, destructive }) =>
+      destructive ? theme.palette.error[200] : theme.palette.primary[300]};
   }
 `;
 
