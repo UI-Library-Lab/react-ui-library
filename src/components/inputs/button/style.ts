@@ -27,7 +27,7 @@ const primaryButtonType = css<IStyledButton>`
     destructive
       ? theme.palette.error[disabled ? 200 : 600]
       : theme.palette.primary[disabled ? 100 : 500]};
-  color: ${({ theme }) => theme.palette.base.white};
+  color: ${({ theme }) => theme.palette.background};
   border: 0;
 
   &:hover {
@@ -85,47 +85,58 @@ const secondaryButtonType = css<IStyledButton>`
 
 const tertiaryButtonType = css<IStyledButton>`
   background-color: transparent;
-  color: ${({ theme, destructive }) =>
-    destructive ? theme.palette.error[600] : theme.palette.primary[500]};
+  color: ${({ theme }) => theme.palette.primary[500]};
   border: 0;
 
   &:hover {
-    background-color: ${({ theme, destructive }) =>
-      destructive ? theme.palette.error[50] : theme.palette.primary[50]};
-    color: ${({ theme, destructive }) =>
-      destructive ? theme.palette.error[700] : theme.palette.primary[600]};
+    background-color: ${({ theme }) => theme.palette.primary[50]};
+    color: ${({ theme }) => theme.palette.primary[600]};
   }
 
   &:focus {
-    background-color: transparent;
-    color: ${({ theme, destructive }) =>
-      destructive ? theme.palette.error[600] : theme.palette.primary[500]};
+    background-color: ${({ theme }) => theme.palette.background};
+    color: ${({ theme }) => theme.palette.primary[500]};
   }
 
   &:disabled {
-    background-color: transparent;
+    background-color: ${({ theme }) => theme.palette.background};
+    color: ${({ theme }) => theme.palette.gray[300]};
+  }
+`;
+
+const tertiaryGrayButtonType = css<IStyledButton>`
+  background-color: ${({ theme }) => theme.palette.background};
+  color: ${({ theme }) => theme.palette.gray[600]};
+  border: 0;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.palette.gray[50]};
+    color: ${({ theme }) => theme.palette.gray[700]};
+  }
+
+  &:disabled {
+    background-color: ${({ theme }) => theme.palette.background};
     color: ${({ theme, destructive }) =>
       destructive ? theme.palette.error[300] : theme.palette.gray[300]};
   }
 `;
 
-const tertiaryGrayButtonType = css<IStyledButton>`
-  background-color: transparent;
-  color: ${({ theme, destructive }) =>
-    destructive ? theme.palette.error[600] : theme.palette.gray[600]};
+/**
+ * Error css for both Tertiary
+ */
+const tertiaryError = css`
+  background-color: ${({ theme }) => theme.palette.background};
+  color: ${({ theme }) => theme.palette.error[600]};
   border: 0;
 
   &:hover {
-    background-color: ${({ theme, destructive }) =>
-      destructive ? theme.palette.error[50] : theme.palette.gray[50]};
-    color: ${({ theme, destructive }) =>
-      destructive ? theme.palette.error[700] : theme.palette.gray[700]};
+    background-color: ${({ theme }) => theme.palette.error[50]};
+    color: ${({ theme }) => theme.palette.error[700]};
   }
 
   &:disabled {
-    background-color: ${({ theme }) => theme.palette.base.white};
-    color: ${({ theme, destructive }) =>
-      destructive ? theme.palette.error[300] : theme.palette.gray[300]};
+    background-color: ${({ theme }) => theme.palette.background};
+    color: ${({ theme }) => theme.palette.error[300]};
   }
 `;
 
@@ -176,6 +187,32 @@ const ghostGrayButtonType = css<IStyledButton>`
   }
 `;
 
+/**
+ * Error css for both Ghost type
+ */
+const ghostErrorButtonType = css<IStyledButton>`
+  background-color: ${({ theme }) => theme.palette.background};
+  color: ${({ theme }) => theme.palette.error[600]};
+  border: 1px solid;
+  border-color: ${({ theme }) => theme.palette.error[400]};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.palette.error[25]};
+    border-color: ${({ theme }) => theme.palette.error[500]};
+  }
+
+  &:focus {
+    box-shadow: ${({ theme }) => `0px 0px 0px 4px ${theme.palette.error[100]}`};
+    border-color: ${({ theme }) => theme.palette.error[400]};
+  }
+
+  &:disabled {
+    background-color: ${({ theme }) => theme.palette.background};
+    color: ${({ theme }) => theme.palette.error[200]};
+    border-color: ${({ theme }) => theme.palette.error[200]};
+  }
+`;
+
 const linkButtonType = css<IStyledButton>`
   background-color: ${({ theme }) => theme.palette.background};
   color: ${({ theme }) => theme.palette.primary[500]};
@@ -203,25 +240,52 @@ const linkGrayButtonType = css<IStyledButton>`
     color: ${({ theme }) => theme.palette.gray[300]};
   }
 `;
-const buttonTypeStyle = {
-  [ButtonTypes.PRIMARY]: primaryButtonType,
-  [ButtonTypes.SECONDARY]: secondaryButtonType,
-  [ButtonTypes.TERTIARY]: tertiaryButtonType,
-  [ButtonTypes.TERTIARY_GRAY]: tertiaryGrayButtonType,
-  [ButtonTypes.GHOST]: ghostButtonType,
-  [ButtonTypes.GHOST_GRAY]: ghostGrayButtonType,
-  [ButtonTypes.LINK]: linkButtonType,
-  [ButtonTypes.LINK_GRAY]: linkGrayButtonType,
-} as Record<
-  `${ButtonTypes}`,
-  FlattenInterpolation<ThemedStyledProps<IStyledButton, DefaultTheme>>
->;
+
+/**
+ * Error css for both link type
+ */
+const linkErrorButtonType = css<IStyledButton>`
+  background-color: ${({ theme }) => theme.palette.background};
+  color: ${({ theme }) => theme.palette.error[600]};
+  border: 0;
+
+  &:hover {
+    color: ${({ theme }) => theme.palette.error[700]};
+  }
+
+  &:disabled {
+    color: ${({ theme }) => theme.palette.error[300]};
+  }
+`;
+
+const buttonTypeStyle = (destructive: boolean) =>
+  ({
+    [ButtonTypes.PRIMARY]: primaryButtonType,
+    [ButtonTypes.SECONDARY]: secondaryButtonType,
+    [ButtonTypes.TERTIARY]: destructive ? tertiaryError : tertiaryButtonType,
+    [ButtonTypes.TERTIARY_GRAY]: destructive
+      ? tertiaryError
+      : tertiaryGrayButtonType,
+    [ButtonTypes.GHOST]: destructive ? ghostErrorButtonType : ghostButtonType,
+    [ButtonTypes.GHOST_GRAY]: destructive
+      ? ghostErrorButtonType
+      : ghostGrayButtonType,
+    [ButtonTypes.LINK]: destructive ? linkErrorButtonType : linkButtonType,
+    [ButtonTypes.LINK_GRAY]: destructive
+      ? linkErrorButtonType
+      : linkGrayButtonType,
+  } as Record<
+    `${ButtonTypes}`,
+    FlattenInterpolation<ThemedStyledProps<IStyledButton, DefaultTheme>>
+  >);
 
 /* ---------------------------- Styled Components --------------------------- */
 export const StyledButton = styled.button<IStyledButton>`
   ${commonTypography}
   ${commonTransition}
-  ${({ types }) => types && buttonTypeStyle[types]}
+  // Button types css
+  ${({ types, destructive }) =>
+    types && buttonTypeStyle(destructive || false)[types]}
   border-radius: ${({ theme }) => theme.spacing[1]};
   cursor: ${({ disabled }) => (disabled ? 'auto' : 'pointer')};
   display: inline-flex;
