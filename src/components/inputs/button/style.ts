@@ -23,23 +23,30 @@ type IStyledButton = Omit<IButtonProps, 'ref'>;
 
 /* ------------------------------- ButtonTypes ------------------------------ */
 const primaryButtonType = css<IStyledButton>`
-  background-color: ${({ theme, disabled }) =>
-    theme.palette.primary[disabled ? 100 : 500]};
+  background-color: ${({ theme, disabled, destructive }) =>
+    destructive
+      ? theme.palette.error[disabled ? 200 : 600]
+      : theme.palette.primary[disabled ? 100 : 500]};
   color: ${({ theme }) => theme.palette.base.white};
   border: 0;
 
   &:hover {
-    background-color: ${({ theme }) => theme.palette.primary[600]};
+    background-color: ${({ theme, destructive }) =>
+      destructive ? theme.palette.error[700] : theme.palette.primary[600]};
   }
 
   &:focus {
-    background-color: ${({ theme }) => theme.palette.primary[500]};
-    box-shadow: ${({ theme }) =>
-      `0px 0px 0px 4px ${theme.palette.primary[100]}`};
+    background-color: ${({ theme, destructive }) =>
+      destructive ? theme.palette.error[600] : theme.palette.primary[500]};
+    box-shadow: ${({ theme, destructive }) =>
+      `0px 0px 0px 4px ${
+        destructive ? theme.palette.error[100] : theme.palette.primary[100]
+      }`};
   }
 
   &:disabled {
-    background-color: ${({ theme }) => theme.palette.primary[100]};
+    background-color: ${({ theme, destructive }) =>
+      destructive ? theme.palette.error[200] : theme.palette.primary[100]};
   }
 `;
 
