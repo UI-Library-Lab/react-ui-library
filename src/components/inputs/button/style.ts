@@ -85,37 +85,47 @@ const secondaryButtonType = css<IStyledButton>`
 
 const tertiaryButtonType = css<IStyledButton>`
   background-color: transparent;
-  color: ${({ theme }) => theme.palette.primary[500]};
+  color: ${({ theme, destructive }) =>
+    destructive ? theme.palette.error[600] : theme.palette.primary[500]};
   border: 0;
 
   &:hover {
-    background-color: ${({ theme }) => theme.palette.primary[50]};
-    color: ${({ theme }) => theme.palette.primary[600]};
+    background-color: ${({ theme, destructive }) =>
+      destructive ? theme.palette.error[50] : theme.palette.primary[50]};
+    color: ${({ theme, destructive }) =>
+      destructive ? theme.palette.error[700] : theme.palette.primary[600]};
   }
 
   &:focus {
     background-color: transparent;
-    color: ${({ theme }) => theme.palette.primary[500]};
+    color: ${({ theme, destructive }) =>
+      destructive ? theme.palette.error[600] : theme.palette.primary[500]};
   }
 
   &:disabled {
     background-color: transparent;
-    color: ${({ theme }) => theme.palette.gray[300]};
+    color: ${({ theme, destructive }) =>
+      destructive ? theme.palette.error[300] : theme.palette.gray[300]};
   }
 `;
 
 const tertiaryGrayButtonType = css<IStyledButton>`
   background-color: transparent;
-  color: ${({ theme }) => theme.palette.gray[600]};
+  color: ${({ theme, destructive }) =>
+    destructive ? theme.palette.error[600] : theme.palette.gray[600]};
   border: 0;
 
   &:hover {
-    background-color: ${({ theme }) => theme.palette.gray[50]};
+    background-color: ${({ theme, destructive }) =>
+      destructive ? theme.palette.error[50] : theme.palette.gray[50]};
+    color: ${({ theme, destructive }) =>
+      destructive ? theme.palette.error[700] : theme.palette.gray[700]};
   }
 
   &:disabled {
     background-color: ${({ theme }) => theme.palette.base.white};
-    color: ${({ theme }) => theme.palette.gray[300]};
+    color: ${({ theme, destructive }) =>
+      destructive ? theme.palette.error[300] : theme.palette.gray[300]};
   }
 `;
 
