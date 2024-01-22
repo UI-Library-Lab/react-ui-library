@@ -5,7 +5,7 @@ import {
 } from '~/components/inputs/button/i-button-props';
 import { Sizes } from '~/components/common/common-enums';
 import { Circle } from '~/components/icons';
-import Button from '~/components/inputs/button/button';
+import { Button } from '~/index';
 
 export default {
   title: 'Input/Button',
