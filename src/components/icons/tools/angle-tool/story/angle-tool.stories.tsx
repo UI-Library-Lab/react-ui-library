@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AngleTool from '../angle-tool';
 
 const meta: Meta<typeof AngleTool> = {
-  title: 'Icons/Angle tool',
+  title: 'Icons/Tools/Angle tool',
   component: AngleTool,
   parameters: {
     design: {

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AddUser from '../add-user';
 
 const meta: Meta<typeof AddUser> = {
-  title: 'Icons/Add user',
+  title: 'Icons/Users/Add user',
   component: AddUser,
   parameters: {
     design: {

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Cloud from '../cloud';
 
 const meta: Meta<typeof Cloud> = {
-  title: 'Icons/Cloud',
+  title: 'Icons/Weather/Cloud',
   component: Cloud,
   parameters: {
     design: {

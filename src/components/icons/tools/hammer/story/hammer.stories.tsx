@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Hammer from '../hammer';
 
 const meta: Meta<typeof Hammer> = {
-  title: 'Icons/Hammer',
+  title: 'Icons/Tools/Hammer',
   component: Hammer,
   parameters: {
     design: {

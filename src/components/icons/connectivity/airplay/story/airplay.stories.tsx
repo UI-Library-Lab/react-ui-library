@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Airplay from '../airplay';
 
 const meta: Meta<typeof Airplay> = {
-  title: 'Icons/Airplay',
+  title: 'Icons/Connectivity/Airplay',
   component: Airplay,
   parameters: {
     design: {

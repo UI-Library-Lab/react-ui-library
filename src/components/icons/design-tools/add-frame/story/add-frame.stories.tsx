@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AddFrame from '../add-frame';
 
 const meta: Meta<typeof AddFrame> = {
-  title: 'Icons/Add frame',
+  title: 'Icons/Design Tools/Add frame',
   component: AddFrame,
   parameters: {
     design: {

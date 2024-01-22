@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import ArrowBlSquare from '../arrow-bl-square';
 
 const meta: Meta<typeof ArrowBlSquare> = {
-  title: 'Icons/Arrow bl square',
+  title: 'Icons/Navigation/Arrow bl square',
   component: ArrowBlSquare,
   parameters: {
     design: {

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import BeachBagBig from '../beach-bag-big';
 
 const meta: Meta<typeof BeachBagBig> = {
-  title: 'Icons/Beach bag big',
+  title: 'Icons/Clothing/Beach bag big',
   component: BeachBagBig,
   parameters: {
     design: {

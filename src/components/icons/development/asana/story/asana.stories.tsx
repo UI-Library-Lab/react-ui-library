@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Asana from '../asana';
 
 const meta: Meta<typeof Asana> = {
-  title: 'Icons/Asana',
+  title: 'Icons/Development/Asana',
   component: Asana,
   parameters: {
     design: {

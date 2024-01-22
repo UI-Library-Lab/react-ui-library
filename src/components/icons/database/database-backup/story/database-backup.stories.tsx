@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import DatabaseBackup from '../database-backup';
 
 const meta: Meta<typeof DatabaseBackup> = {
-  title: 'Icons/Database backup',
+  title: 'Icons/Database/Database backup',
   component: DatabaseBackup,
   parameters: {
     design: {

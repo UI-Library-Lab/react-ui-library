@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AppNotification from '../app-notification';
 
 const meta: Meta<typeof AppNotification> = {
-  title: 'Icons/App notification',
+  title: 'Icons/Communication/App notification',
   component: AppNotification,
   parameters: {
     design: {

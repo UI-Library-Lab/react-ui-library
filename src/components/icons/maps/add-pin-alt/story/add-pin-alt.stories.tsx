@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AddPinAlt from '../add-pin-alt';
 
 const meta: Meta<typeof AddPinAlt> = {
-  title: 'Icons/Add pin alt',
+  title: 'Icons/Maps/Add pin alt',
   component: AddPinAlt,
   parameters: {
     design: {

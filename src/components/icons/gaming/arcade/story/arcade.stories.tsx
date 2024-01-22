@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Arcade from '../arcade';
 
 const meta: Meta<typeof Arcade> = {
-  title: 'Icons/Arcade',
+  title: 'Icons/Gaming/Arcade',
   component: Arcade,
   parameters: {
     design: {

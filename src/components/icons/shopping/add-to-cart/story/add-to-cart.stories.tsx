@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AddToCart from '../add-to-cart';
 
 const meta: Meta<typeof AddToCart> = {
-  title: 'Icons/Add to cart',
+  title: 'Icons/Shopping/Add to cart',
   component: AddToCart,
   parameters: {
     design: {

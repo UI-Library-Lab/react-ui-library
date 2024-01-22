@@ -1,40 +1,64 @@
-import { ComponentMeta } from '@storybook/react';
-import Button from '../Button';
-import { Template } from './Template';
+import { Meta, StoryObj } from '@storybook/react';
+import {
+  ButtonTypes,
+  IButtonProps,
+} from '~/components/inputs/button/i-button-props';
+import { Sizes } from '~/components/common/common-enums';
+import { Circle } from '~/components/icons';
+import Button from '~/components/inputs/button/button';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Input/Button',
-  component: Button,
   parameters: {
-    // Adding Figma to Storybook
     design: {
       type: 'figma',
-      url: import.meta.env.STORYBOOK_FIGMA_URL,
+      url: 'https://www.figma.com/file/DD3GQCNDXjQaaXApTxmfES/Jinex-Design-System-(Code)?type=design&node-id=2-18000&mode=design&t=dhI8p1bAV000t9J2-4',
     },
   },
-} as ComponentMeta<typeof Button>;
+  args: {
+    label: 'Default Label',
+    destructive: false,
+    types: ButtonTypes.PRIMARY,
+    size: Sizes.MEDIUM,
+    disabled: false,
+    expanded: false,
+  },
+  argTypes: {
+    disabled: {
+      control: 'boolean',
+    },
+    types: {
+      control: 'radio',
+      options: Object.values(ButtonTypes),
+    },
+    size: {
+      control: 'radio',
+      options: Object.values(Sizes),
+    },
+    label: {
+      type: 'string',
+    },
+    destructive: {
+      defaultValue: false,
+      description: 'Danger state or not',
+      type: 'boolean',
+    },
+    expanded: {
+      defaultValue: false,
+      description: 'take all width places of parent',
+      type: 'boolean',
+    },
+  },
+} as Meta<typeof Button>;
 
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: true,
-  label: 'Button',
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
+export const Primary: StoryObj<Meta> = {
+  render: (props) => {
+    return (
+      <Button
+        {...(props as IButtonProps)}
+        LeadingIcon={<Circle />}
+        TrailingIcon={<Circle />}
+      />
+    );
+  },
 };

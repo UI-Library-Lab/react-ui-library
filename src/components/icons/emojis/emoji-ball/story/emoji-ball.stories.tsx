@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import EmojiBall from '../emoji-ball';
 
 const meta: Meta<typeof EmojiBall> = {
-  title: 'Icons/Emoji ball',
+  title: 'Icons/Emojis/Emoji ball',
   component: EmojiBall,
   parameters: {
     design: {

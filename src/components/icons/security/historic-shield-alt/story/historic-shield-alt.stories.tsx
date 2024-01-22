@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import HistoricShieldAlt from '../historic-shield-alt';
 
 const meta: Meta<typeof HistoricShieldAlt> = {
-  title: 'Icons/Historic shield alt',
+  title: 'Icons/Security/Historic shield alt',
   component: HistoricShieldAlt,
   parameters: {
     design: {

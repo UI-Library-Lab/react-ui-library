@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AppleIMac2021Side from '../apple-imac-2021-side';
 
 const meta: Meta<typeof AppleIMac2021Side> = {
-  title: 'Icons/Apple imac 2021 side',
+  title: 'Icons/Devices/Apple imac 2021 side',
   component: AppleIMac2021Side,
   parameters: {
     design: {

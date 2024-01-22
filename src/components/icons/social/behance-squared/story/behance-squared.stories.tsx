@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import BehanceSquared from '../behance-squared';
 
 const meta: Meta<typeof BehanceSquared> = {
-  title: 'Icons/Behance squared',
+  title: 'Icons/Social/Behance squared',
   component: BehanceSquared,
   parameters: {
     design: {

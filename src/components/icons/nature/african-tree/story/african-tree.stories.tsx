@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AfricanTree from '../african-tree';
 
 const meta: Meta<typeof AfricanTree> = {
-  title: 'Icons/African tree',
+  title: 'Icons/Nature/African tree',
   component: AfricanTree,
   parameters: {
     design: {

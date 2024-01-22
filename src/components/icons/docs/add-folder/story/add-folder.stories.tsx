@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AddFolder from '../add-folder';
 
 const meta: Meta<typeof AddFolder> = {
-  title: 'Icons/Add folder',
+  title: 'Icons/Docs/Add folder',
   component: AddFolder,
   parameters: {
     design: {

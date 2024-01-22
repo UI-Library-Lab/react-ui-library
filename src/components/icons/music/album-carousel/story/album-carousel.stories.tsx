@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AlbumCarousel from '../album-carousel';
 
 const meta: Meta<typeof AlbumCarousel> = {
-  title: 'Icons/Album carousel',
+  title: 'Icons/Music/Album carousel',
   component: AlbumCarousel,
   parameters: {
     design: {

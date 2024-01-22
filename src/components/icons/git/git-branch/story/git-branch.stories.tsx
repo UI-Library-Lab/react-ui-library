@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import GitBranch from '../git-branch';
 
 const meta: Meta<typeof GitBranch> = {
-  title: 'Icons/Git branch',
+  title: 'Icons/Git/Git branch',
   component: GitBranch,
   parameters: {
     design: {

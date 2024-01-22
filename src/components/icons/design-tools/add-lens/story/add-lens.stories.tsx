@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AddLens from '../add-lens';
 
 const meta: Meta<typeof AddLens> = {
-  title: 'Icons/Add lens',
+  title: 'Icons/Design Tools/Add lens',
   component: AddLens,
   parameters: {
     design: {
