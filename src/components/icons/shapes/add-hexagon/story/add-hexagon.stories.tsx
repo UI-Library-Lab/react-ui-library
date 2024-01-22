@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AddHexagon from '../add-hexagon';
 
 const meta: Meta<typeof AddHexagon> = {
-  title: 'Icons/Add hexagon',
+  title: 'Icons/Shapes/Add hexagon',
   component: AddHexagon,
   parameters: {
     design: {

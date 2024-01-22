@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Bag from '../bag';
 
 const meta: Meta<typeof Bag> = {
-  title: 'Icons/Bag',
+  title: 'Icons/Clothing/Bag',
   component: Bag,
   parameters: {
     design: {

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Bank from '../bank';
 
 const meta: Meta<typeof Bank> = {
-  title: 'Icons/Bank',
+  title: 'Icons/Finance/Bank',
   component: Bank,
   parameters: {
     design: {

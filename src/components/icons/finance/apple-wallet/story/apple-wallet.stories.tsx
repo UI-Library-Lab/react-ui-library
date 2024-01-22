@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AppleWallet from '../apple-wallet';
 
 const meta: Meta<typeof AppleWallet> = {
-  title: 'Icons/Apple wallet',
+  title: 'Icons/Finance/Apple wallet',
   component: AppleWallet,
   parameters: {
     design: {

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AirConditioner from '../air-conditioner';
 
 const meta: Meta<typeof AirConditioner> = {
-  title: 'Icons/Air conditioner',
+  title: 'Icons/Home/Air conditioner',
   component: AirConditioner,
   parameters: {
     design: {

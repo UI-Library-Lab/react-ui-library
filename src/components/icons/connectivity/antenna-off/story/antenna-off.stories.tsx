@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AntennaOff from '../antenna-off';
 
 const meta: Meta<typeof AntennaOff> = {
-  title: 'Icons/Antenna off',
+  title: 'Icons/Connectivity/Antenna off',
   component: AntennaOff,
   parameters: {
     design: {

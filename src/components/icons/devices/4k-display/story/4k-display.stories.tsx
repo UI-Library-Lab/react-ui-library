@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import FourKDisplay from '../4k-display';
 
 const meta: Meta<typeof FourKDisplay> = {
-  title: 'Icons/4k display',
+  title: 'Icons/Devices/4k display',
   component: FourKDisplay,
   parameters: {
     design: {

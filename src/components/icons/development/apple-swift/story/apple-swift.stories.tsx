@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AppleSwift from '../apple-swift';
 
 const meta: Meta<typeof AppleSwift> = {
-  title: 'Icons/Apple swift',
+  title: 'Icons/Development/Apple swift',
   component: AppleSwift,
   parameters: {
     design: {

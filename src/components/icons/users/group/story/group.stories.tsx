@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Group from '../group';
 
 const meta: Meta<typeof Group> = {
-  title: 'Icons/Group',
+  title: 'Icons/Users/Group',
   component: Group,
   parameters: {
     design: {

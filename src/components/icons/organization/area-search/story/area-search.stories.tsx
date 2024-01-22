@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AreaSearch from '../area-search';
 
 const meta: Meta<typeof AreaSearch> = {
-  title: 'Icons/Area search',
+  title: 'Icons/Organization/Area search',
   component: AreaSearch,
   parameters: {
     design: {

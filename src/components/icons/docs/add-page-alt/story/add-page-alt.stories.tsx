@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AddPageAlt from '../add-page-alt';
 
 const meta: Meta<typeof AddPageAlt> = {
-  title: 'Icons/Add page alt',
+  title: 'Icons/Docs/Add page alt',
   component: AddPageAlt,
   parameters: {
     design: {

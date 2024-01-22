@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Building from '../building';
 
 const meta: Meta<typeof Building> = {
-  title: 'Icons/Building',
+  title: 'Icons/Buildings/Building',
   component: Building,
   parameters: {
     design: {

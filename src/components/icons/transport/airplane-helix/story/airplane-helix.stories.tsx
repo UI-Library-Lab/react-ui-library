@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AirplaneHelix from '../airplane-helix';
 
 const meta: Meta<typeof AirplaneHelix> = {
-  title: 'Icons/Airplane helix',
+  title: 'Icons/Transport/Airplane helix',
   component: AirplaneHelix,
   parameters: {
     design: {
