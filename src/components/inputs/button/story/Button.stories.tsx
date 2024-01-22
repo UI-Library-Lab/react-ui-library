@@ -4,12 +4,11 @@ import {
   IButtonProps,
 } from '~/components/inputs/button/i-button-props';
 import { Sizes } from '~/components/common/common-enums';
-import Button from '~/components/inputs/button/button';
 import { Circle } from '~/components/icons';
+import Button from '~/components/inputs/button/button';
 
 export default {
   title: 'Input/Button',
-  component: Button,
   parameters: {
     design: {
       type: 'figma',
