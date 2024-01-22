@@ -222,6 +222,10 @@ export const defaultTheme: IUiLibraryTheme = {
      */
     2: defaultConfigs.spacing[2],
     /**
+     * 10px
+     */
+    2.5: defaultConfigs.spacing[2.5],
+    /**
      * 12px
      */
     3: defaultConfigs.spacing[3],
@@ -229,6 +233,10 @@ export const defaultTheme: IUiLibraryTheme = {
      * 16px
      */
     4: defaultConfigs.spacing[4],
+    /**
+     * 10px
+     */
+    4.5: defaultConfigs.spacing[4.5],
     /**
      * 20px
      */
@@ -245,6 +253,10 @@ export const defaultTheme: IUiLibraryTheme = {
      * 40px
      */
     10: defaultConfigs.spacing[10],
+    /**
+     * 44px
+     */
+    11: defaultConfigs.spacing[11],
     /**
      * 48px
      */
@@ -278,9 +290,17 @@ export const defaultTheme: IUiLibraryTheme = {
      */
     32: defaultConfigs.spacing[32],
     /**
+     * 134px
+     */
+    34: defaultConfigs.spacing[34],
+    /**
      * 144px
      */
     36: defaultConfigs.spacing[36],
+    /**
+     * 156px
+     */
+    38: defaultConfigs.spacing[38],
     /**
      * 160px
      */

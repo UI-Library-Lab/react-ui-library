@@ -27,7 +27,7 @@ export interface IButtonProps extends ICommonProps<HTMLButtonElement> {
    *
    * Default: MEDIUM
    */
-  size?: `${Sizes}`;
+  size: `${Sizes}`;
   /**
    * Button contents
    */
@@ -44,6 +44,10 @@ export interface IButtonProps extends ICommonProps<HTMLButtonElement> {
    * Is error shape
    */
   destructive?: boolean;
+  /**
+   * Will take all width spaces
+   */
+  expanded?: boolean;
   /**
    * Is button disabled?
    */

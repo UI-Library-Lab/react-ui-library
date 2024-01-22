@@ -126,6 +126,10 @@ export type SpacingConfigs = {
    */
   2: string;
   /**
+   * 10px
+   */
+  2.5: string;
+  /**
    * 12px
    */
   3: string;
@@ -133,6 +137,10 @@ export type SpacingConfigs = {
    * 16px
    */
   4: string;
+  /**
+   * 18px
+   */
+  4.5: string;
   /**
    * 20px
    */
@@ -149,6 +157,10 @@ export type SpacingConfigs = {
    * 40px
    */
   10: string;
+  /**
+   * 44px;
+   */
+  11: string;
   /**
    * 48px
    */
@@ -182,9 +194,17 @@ export type SpacingConfigs = {
    */
   32: string;
   /**
+   * 134px
+   */
+  34: string;
+  /**
    * 144px
    */
   36: string;
+  /**
+   * 156px
+   */
+  38: string;
   /**
    * 160px
    */

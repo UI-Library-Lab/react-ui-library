@@ -4,6 +4,7 @@ import styled, {
   ThemedStyledProps,
   css,
 } from 'styled-components';
+import { Sizes } from '~/components/common/common-enums';
 import {
   commonTransition,
   commonTypography,
@@ -12,6 +13,7 @@ import {
   ButtonTypes,
   IButtonProps,
 } from '~/components/inputs/button/i-button-props';
+import { NTypographyConfigs, SpacingConfigs } from '~/utils/configs/protocols';
 
 /* -------------------------------------------------------------------------- */
 /*                                  Interface                                 */
@@ -279,17 +281,76 @@ const buttonTypeStyle = (destructive: boolean) =>
     FlattenInterpolation<ThemedStyledProps<IStyledButton, DefaultTheme>>
   >);
 
+/* ---------------------------------- Sizes --------------------------------- */
+const buttonWidthSizesStyle = (sizes: SpacingConfigs) =>
+  ({
+    [Sizes.SMALL]: sizes[32],
+    [Sizes.MEDIUM]: sizes[34],
+    [Sizes.LARGE]: sizes[36],
+    [Sizes.XLARGE]: sizes[38],
+    [Sizes.XXLARGE]: sizes[48],
+  } as Record<`${Sizes}`, string>);
+
+const buttonHeightSizesStyle = (sizes: SpacingConfigs) =>
+  ({
+    [Sizes.SMALL]: sizes[8],
+    [Sizes.MEDIUM]: sizes[10],
+    [Sizes.LARGE]: sizes[11],
+    [Sizes.XLARGE]: sizes[12],
+    [Sizes.XXLARGE]: sizes[14],
+  } as Record<`${Sizes}`, string>);
+
+const buttonFontSizes = (font: NTypographyConfigs.Typography) =>
+  ({
+    [Sizes.SMALL]: font.fontSize.text.sm.size,
+    [Sizes.MEDIUM]: font.fontSize.text.sm.size,
+    [Sizes.LARGE]: font.fontSize.text.md.size,
+    [Sizes.XLARGE]: font.fontSize.text.md.size,
+    [Sizes.XXLARGE]: font.fontSize.text.lg.size,
+  } as Record<`${Sizes}`, string>);
+
+const buttonLineHeight = (font: NTypographyConfigs.Typography) =>
+  ({
+    [Sizes.SMALL]: font.fontSize.text.sm.lineHeight,
+    [Sizes.MEDIUM]: font.fontSize.text.sm.lineHeight,
+    [Sizes.LARGE]: font.fontSize.text.md.lineHeight,
+    [Sizes.XLARGE]: font.fontSize.text.md.lineHeight,
+    [Sizes.XXLARGE]: font.fontSize.text.lg.lineHeight,
+  } as Record<`${Sizes}`, string>);
+
+const buttonPadding = (sizes: SpacingConfigs) =>
+  ({
+    [Sizes.SMALL]: `${sizes[2]} ${sizes[3]}`,
+    [Sizes.MEDIUM]: `${sizes[2.5]} ${sizes[4]}`,
+    [Sizes.LARGE]: `${sizes[2.5]} ${sizes[4.5]}`,
+    [Sizes.XLARGE]: `${sizes[3]} ${sizes[6]}`,
+    [Sizes.XXLARGE]: `${sizes[4]} ${sizes[8]}`,
+  } as Record<`${Sizes}`, string>);
+
+const buttonSizesStyles = css<IStyledButton>`
+  min-width: ${({ size, theme, expanded }) =>
+    expanded ? '100%' : buttonWidthSizesStyle(theme.spacing)[size]};
+  min-height: ${({ size, theme }) =>
+    buttonHeightSizesStyle(theme.spacing)[size]};
+  font-size: ${({ size, theme }) => buttonFontSizes(theme.typography)[size]};
+  line-height: ${({ size, theme }) => buttonLineHeight(theme.typography)[size]};
+  padding: ${({ theme, size }) => buttonPadding(theme.spacing)[size]};
+`;
+
 /* ---------------------------- Styled Components --------------------------- */
 export const StyledButton = styled.button<IStyledButton>`
   ${commonTypography}
   ${commonTransition}
-  // Button types css
+  // Sizes css
+  ${buttonSizesStyles}
+  // types css
   ${({ types, destructive }) =>
     types && buttonTypeStyle(destructive || false)[types]}
   border-radius: ${({ theme }) => theme.spacing[1]};
   cursor: ${({ disabled }) => (disabled ? 'auto' : 'pointer')};
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: ${({ theme }) => theme.spacing[3]};
-  padding: ${({ theme }) => `${theme.spacing[3]} ${theme.spacing[8]}`};
 `;
 /* -------------------------------------------------------------------------- */

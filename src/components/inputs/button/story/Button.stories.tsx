@@ -22,6 +22,7 @@ export default {
     types: ButtonTypes.PRIMARY,
     size: Sizes.MEDIUM,
     disabled: false,
+    expanded: false,
   },
   argTypes: {
     disabled: {
@@ -41,6 +42,11 @@ export default {
     destructive: {
       defaultValue: false,
       description: 'Danger state or not',
+      type: 'boolean',
+    },
+    expanded: {
+      defaultValue: false,
+      description: 'take all width places of parent',
       type: 'boolean',
     },
   },
