@@ -9,7 +9,6 @@ module.exports = {
     '@storybook/addon-interactions', 
     'storybook-addon-designs', 
     '@storybook/addon-postcss',
-    'storybook-dark-mode'
   ],
 
   framework: {
