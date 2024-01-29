@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AddKeyframe from '../add-keyframe';
 
 const meta: Meta<typeof AddKeyframe> = {
-  title: 'Icons/Add keyframe',
+  title: 'Icons/Animations/Add keyframe',
   component: AddKeyframe,
   parameters: {
     design: {

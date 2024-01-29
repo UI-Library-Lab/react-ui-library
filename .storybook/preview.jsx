@@ -1,8 +1,7 @@
 import { DARK_MODE_EVENT_NAME } from 'storybook-dark-mode';
 import React, { useEffect, useState } from 'react'
-import { createUiLibraryTheme, UiLibraryThemeProvider } from '../src/index';
+import { createUiLibraryTheme, paletteModes, UiLibraryThemeProvider } from '../src/index';
 import {addons} from '@storybook/addons';
-import { paletteModes } from '../src/utils/configs/constants/defaultConfigs';
 
 const channel = addons.getChannel();
 

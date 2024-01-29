@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import GraphDown from '../graph-down';
 
 const meta: Meta<typeof GraphDown> = {
-  title: 'Icons/Graph down',
+  title: 'Icons/Analytics/Graph down',
   component: GraphDown,
   parameters: {
     design: {

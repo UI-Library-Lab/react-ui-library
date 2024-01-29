@@ -84,7 +84,7 @@ const paletteConfig = {
 };
 /* ------------------------------- Typography ------------------------------- */
 const typographyConfig = {
-  fontFamily: '"Inter", "sans-serif"',
+  fontFamily: "'Inter', sans-serif;",
   letterSpacing: '-0.02rem',
   fontWight: {
     normal: 400,
@@ -145,13 +145,13 @@ const typographyConfig = {
 };
 /* --------------------------------- Shadow --------------------------------- */
 const shadowConfig = {
-  xs: '0px 1px 3px rgba(16, 24, 40, 0.06)',
-  sm: '0px 1px 4px rgba(16, 24, 40, 0.08), 0px 1px 3px rgba(16, 24, 40, 0.08)',
-  md: '0px 4px 8px -1px rgba(16, 24, 40, 0.08), 0px 2px 4px -2px rgba(16, 24, 40, 0.06)',
-  lg: '0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 8px -3px rgba(16, 24, 40, 0.04)',
-  xl: '0px 20px 24px -4px rgba(16, 24, 40, 0.1), 0px 8px 10px -2px rgba(16, 24, 40, 0.02)',
-  '2xl': '0px 26px 50px -14px rgba(16, 24, 40, 0.2)',
-  '3xl': '0px 28px 60px -14px rgba(16, 24, 40, 0.16)',
+  xs: '0px 1px 3px',
+  sm: '0px 1px 4px',
+  md: '0px 4px 8px -1px, 0px 2px 4px -2px',
+  lg: '0px 12px 16px -4px, 0px 4px 8px -3px',
+  xl: '0px 20px 24px -4px, 0px 8px 10px -2px',
+  '3xl': '0px 28px 60px -14px',
+  '2xl': '0px 26px 50px -14px',
 };
 /* ---------------------------------- Blur ---------------------------------- */
 const blurConfig = {
@@ -167,12 +167,15 @@ const spacingConfg = {
   0.5: '0.125rem',
   1: '0.25rem',
   2: '0.5rem',
+  2.5: '0.625rem',
   3: '0.75rem',
   4: '1rem',
+  4.5: '1.125rem',
   5: '1.25rem',
   6: '1.5rem',
   8: '2rem',
   10: '2.5rem',
+  11: '2.75rem',
   12: '3rem',
   14: '3.5rem',
   16: '4rem',
@@ -181,7 +184,9 @@ const spacingConfg = {
   24: '6rem',
   28: '7rem',
   32: '8rem',
+  34: '8.375rem',
   36: '9rem',
+  38: '9.75rem',
   40: '10rem',
   48: '12rem',
   56: '14rem',

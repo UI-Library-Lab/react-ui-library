@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Activity from '../activity';
 
 const meta: Meta<typeof Activity> = {
-  title: 'Icons/Activity',
+  title: 'Icons/Other/Activity',
   component: Activity,
   parameters: {
     design: {

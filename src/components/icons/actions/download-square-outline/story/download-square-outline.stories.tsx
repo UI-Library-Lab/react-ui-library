@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import DownloadSquareOutline from '../download-square-outline';
 
 const meta: Meta<typeof DownloadSquareOutline> = {
-  title: 'Icons/Download square outline',
+  title: 'Icons/Actions/Download square outline',
   component: DownloadSquareOutline,
   parameters: {
     design: {

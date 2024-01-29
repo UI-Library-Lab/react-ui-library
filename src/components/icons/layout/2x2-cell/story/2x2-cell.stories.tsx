@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import TwoXTwoCell from '../2x2-cell';
 
 const meta: Meta<typeof TwoXTwoCell> = {
-  title: 'Icons/2x2 cell',
+  title: 'Icons/Layout/2x2 cell',
   component: TwoXTwoCell,
   parameters: {
     design: {

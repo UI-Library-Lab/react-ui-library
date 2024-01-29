@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AppleHalf from '../apple-half';
 
 const meta: Meta<typeof AppleHalf> = {
-  title: 'Icons/Apple half',
+  title: 'Icons/Food/Apple half',
   component: AppleHalf,
   parameters: {
     design: {

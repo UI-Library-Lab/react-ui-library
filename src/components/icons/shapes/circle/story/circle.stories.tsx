@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Circle from '../circle';
 
 const meta: Meta<typeof Circle> = {
-  title: 'Icons/Circle',
+  title: 'Icons/Shapes/Circle',
   component: Circle,
   parameters: {
     design: {

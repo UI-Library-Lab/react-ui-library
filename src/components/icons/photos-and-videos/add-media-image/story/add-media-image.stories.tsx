@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AddMediaImage from '../add-media-image';
 
 const meta: Meta<typeof AddMediaImage> = {
-  title: 'Icons/Add media image',
+  title: 'Icons/Photos And Videos/Add media image',
   component: AddMediaImage,
   parameters: {
     design: {

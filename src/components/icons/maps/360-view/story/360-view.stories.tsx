@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import View360 from '../360-view';
 
 const meta: Meta<typeof View360> = {
-  title: 'Icons/360 view',
+  title: 'Icons/Maps/360 view',
   component: View360,
   parameters: {
     design: {

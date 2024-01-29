@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AddCircledOutline from '../add-circled-outline';
 
 const meta: Meta<typeof AddCircledOutline> = {
-  title: 'Icons/Add circled outline',
+  title: 'Icons/Actions/Add circled outline',
   component: AddCircledOutline,
   parameters: {
     design: {

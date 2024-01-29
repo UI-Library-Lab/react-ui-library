@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AddMediaVideo from '../add-media-video';
 
 const meta: Meta<typeof AddMediaVideo> = {
-  title: 'Icons/Add media video',
+  title: 'Icons/Photos And Videos/Add media video',
   component: AddMediaVideo,
   parameters: {
     design: {

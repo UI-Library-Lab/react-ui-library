@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Donate from '../donate';
 
 const meta: Meta<typeof Donate> = {
-  title: 'Icons/Donate',
+  title: 'Icons/Health/Donate',
   component: Donate,
   parameters: {
     design: {

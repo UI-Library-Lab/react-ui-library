@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import FaceId from '../face-id';
 
 const meta: Meta<typeof FaceId> = {
-  title: 'Icons/Face id',
+  title: 'Icons/Identity/Face id',
   component: FaceId,
   parameters: {
     design: {

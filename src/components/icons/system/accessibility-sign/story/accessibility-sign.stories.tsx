@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AccessibilitySign from '../accessibility-sign';
 
 const meta: Meta<typeof AccessibilitySign> = {
-  title: 'Icons/Accessibility sign',
+  title: 'Icons/System/Accessibility sign',
   component: AccessibilitySign,
   parameters: {
     design: {

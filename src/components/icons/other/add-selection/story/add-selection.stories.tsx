@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AddSelection from '../add-selection';
 
 const meta: Meta<typeof AddSelection> = {
-  title: 'Icons/Add selection',
+  title: 'Icons/Other/Add selection',
   component: AddSelection,
   parameters: {
     design: {

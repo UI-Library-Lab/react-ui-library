@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Bitbucket from '../bitbucket';
 
 const meta: Meta<typeof Bitbucket> = {
-  title: 'Icons/Bitbucket',
+  title: 'Icons/Git/Bitbucket',
   component: Bitbucket,
   parameters: {
     design: {

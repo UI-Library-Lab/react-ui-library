@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import BrainElectricity from '../brain-electricity';
 
 const meta: Meta<typeof BrainElectricity> = {
-  title: 'Icons/Brain electricity',
+  title: 'Icons/Science/Brain electricity',
   component: BrainElectricity,
   parameters: {
     design: {

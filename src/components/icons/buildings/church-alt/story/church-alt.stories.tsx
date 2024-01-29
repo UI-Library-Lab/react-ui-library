@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import ChurchAlt from '../church-alt';
 
 const meta: Meta<typeof ChurchAlt> = {
-  title: 'Icons/Church alt',
+  title: 'Icons/Buildings/Church alt',
   component: ChurchAlt,
   parameters: {
     design: {

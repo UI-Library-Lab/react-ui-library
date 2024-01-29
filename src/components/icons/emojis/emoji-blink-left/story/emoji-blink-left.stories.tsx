@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import EmojiBlinkLeft from '../emoji-blink-left';
 
 const meta: Meta<typeof EmojiBlinkLeft> = {
-  title: 'Icons/Emoji blink left',
+  title: 'Icons/Emojis/Emoji blink left',
   component: EmojiBlinkLeft,
   parameters: {
     design: {

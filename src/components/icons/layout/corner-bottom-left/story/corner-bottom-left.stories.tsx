@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import CornerBottomLeft from '../corner-bottom-left';
 
 const meta: Meta<typeof CornerBottomLeft> = {
-  title: 'Icons/Corner bottom left',
+  title: 'Icons/Layout/Corner bottom left',
   component: CornerBottomLeft,
   parameters: {
     design: {

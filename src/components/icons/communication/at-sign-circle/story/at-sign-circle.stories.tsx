@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AtSignCircle from '../at-sign-circle';
 
 const meta: Meta<typeof AtSignCircle> = {
-  title: 'Icons/At sign circle',
+  title: 'Icons/Communication/At sign circle',
   component: AtSignCircle,
   parameters: {
     design: {

@@ -1,8 +1,8 @@
-import { paletteModes } from '~/utils/configs/constants/defaultConfigs';
+import { paletteModes } from '~/utils/configs/constants/default-configs';
 import {
   darkDefaultPalette,
   lightDefaultPalette,
-} from '~/utils/configs/libConfigs';
+} from '~/utils/configs/lib-configs';
 import {
   ICustomUiLibraryTheme,
   IUiLibraryTheme,
