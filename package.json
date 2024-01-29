@@ -9,7 +9,6 @@
     "build-storybook": "storybook build",
     "predeploy": "storybook build",
     "build": "tsc && vite build",
-    "test": "jest",
     "tsc": "tsc"
   },
   "files": [
