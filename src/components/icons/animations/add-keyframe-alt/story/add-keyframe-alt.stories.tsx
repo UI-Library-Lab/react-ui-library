@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AddKeyframeAlt from '../add-keyframe-alt';
 
 const meta: Meta<typeof AddKeyframeAlt> = {
-  title: 'Icons/Add keyframe alt',
+  title: 'Icons/Animations/Add keyframe alt',
   component: AddKeyframeAlt,
   parameters: {
     design: {

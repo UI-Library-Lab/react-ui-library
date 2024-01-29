@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Female from '../female';
 
 const meta: Meta<typeof Female> = {
-  title: 'Icons/Female',
+  title: 'Icons/Health/Female',
   component: Female,
   parameters: {
     design: {

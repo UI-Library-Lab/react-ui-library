@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import ArcCenterPt from '../3d-arc-center-pt';
 
 const meta: Meta<typeof ArcCenterPt> = {
-  title: 'Icons/Arc center pt',
+  title: 'Icons/3d editor/Arc center pt',
   component: ArcCenterPt,
   parameters: {
     design: {

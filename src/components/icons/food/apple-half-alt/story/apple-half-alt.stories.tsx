@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AppleHalfAlt from '../apple-half-alt';
 
 const meta: Meta<typeof AppleHalfAlt> = {
-  title: 'Icons/Apple half alt',
+  title: 'Icons/Food/Apple half alt',
   component: AppleHalfAlt,
   parameters: {
     design: {

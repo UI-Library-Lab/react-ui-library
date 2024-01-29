@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import ArrowBlCircled from '../arrow-bl-circled';
 
 const meta: Meta<typeof ArrowBlCircled> = {
-  title: 'Icons/Arrow bl circled',
+  title: 'Icons/Navigation/Arrow bl circled',
   component: ArrowBlCircled,
   parameters: {
     design: {

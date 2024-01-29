@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import CloudBookAlt from '../cloud-book-alt';
 
 const meta: Meta<typeof CloudBookAlt> = {
-  title: 'Icons/Cloud book alt',
+  title: 'Icons/Cloud/Cloud book alt',
   component: CloudBookAlt,
   parameters: {
     design: {

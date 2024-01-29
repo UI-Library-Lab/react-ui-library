@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Barcode from '../barcode';
 
 const meta: Meta<typeof Barcode> = {
-  title: 'Icons/Barcode',
+  title: 'Icons/Shopping/Barcode',
   component: Barcode,
   parameters: {
     design: {

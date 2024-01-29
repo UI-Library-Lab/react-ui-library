@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AddDatabaseScript from '../add-database-script';
 
 const meta: Meta<typeof AddDatabaseScript> = {
-  title: 'Icons/Add database script',
+  title: 'Icons/Database/Add database script',
   component: AddDatabaseScript,
   parameters: {
     design: {

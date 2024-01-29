@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Behance from '../behance';
 
 const meta: Meta<typeof Behance> = {
-  title: 'Icons/Behance',
+  title: 'Icons/Social/Behance',
   component: Behance,
   parameters: {
     design: {

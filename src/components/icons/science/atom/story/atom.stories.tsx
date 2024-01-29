@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Atom from '../atom';
 
 const meta: Meta<typeof Atom> = {
-  title: 'Icons/Atom',
+  title: 'Icons/Science/Atom',
   component: Atom,
   parameters: {
     design: {

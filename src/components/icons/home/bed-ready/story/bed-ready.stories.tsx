@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import BedReady from '../bed-ready';
 
 const meta: Meta<typeof BedReady> = {
-  title: 'Icons/Bed ready',
+  title: 'Icons/Home/Bed ready',
   component: BedReady,
   parameters: {
     design: {

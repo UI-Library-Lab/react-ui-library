@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import CleanWater from '../clean-water';
 
 const meta: Meta<typeof CleanWater> = {
-  title: 'Icons/Clean water',
+  title: 'Icons/Nature/Clean water',
   component: CleanWater,
   parameters: {
     design: {

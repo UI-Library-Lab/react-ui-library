@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AddHole from '../3d-add-hole';
 
 const meta: Meta<typeof AddHole> = {
-  title: 'Icons/Add hole',
+  title: 'Icons/3d editor/Add hole',
   component: AddHole,
   parameters: {
     design: {

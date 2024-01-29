@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AlignJustify from '../align-justify';
 
 const meta: Meta<typeof AlignJustify> = {
-  title: 'Icons/Align justify',
+  title: 'Icons/Editor/Align justify',
   component: AlignJustify,
   parameters: {
     design: {

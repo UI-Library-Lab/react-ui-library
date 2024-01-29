@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import FingerprintCircledError from '../fingerprint-circled-error';
 
 const meta: Meta<typeof FingerprintCircledError> = {
-  title: 'Icons/Fingerprint circled error',
+  title: 'Icons/Identity/Fingerprint circled error',
   component: FingerprintCircledError,
   parameters: {
     design: {

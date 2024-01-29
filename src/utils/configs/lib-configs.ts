@@ -1,11 +1,11 @@
-import { defaultConfigs, paletteModes } from './constants/defaultConfigs';
+import { defaultConfigs, paletteModes } from './constants/default-configs';
 import { IUiLibraryTheme, NPaletteConfigs } from './protocols';
 /* ------------------------------ light palette ----------------------------- */
 /**
  * palette theme for light mode
  */
 export const lightDefaultPalette: NPaletteConfigs.PaletteModes = {
-  mode: paletteModes.DARK,
+  mode: paletteModes.LIGHT,
   action: {
     hover: defaultConfigs.palette.gray[700],
   },
@@ -66,6 +66,7 @@ export const defaultTheme: IUiLibraryTheme = {
       900: defaultConfigs.palette.gray[900],
     },
     primary: {
+      25: defaultConfigs.palette.primary[25],
       50: defaultConfigs.palette.primary[50],
       100: defaultConfigs.palette.primary[100],
       200: defaultConfigs.palette.primary[200],
@@ -114,6 +115,7 @@ export const defaultTheme: IUiLibraryTheme = {
       900: defaultConfigs.palette.warning[900],
     },
     error: {
+      25: defaultConfigs.palette.error[25],
       50: defaultConfigs.palette.error[50],
       100: defaultConfigs.palette.error[100],
       200: defaultConfigs.palette.error[200],
@@ -220,6 +222,10 @@ export const defaultTheme: IUiLibraryTheme = {
      */
     2: defaultConfigs.spacing[2],
     /**
+     * 10px
+     */
+    2.5: defaultConfigs.spacing[2.5],
+    /**
      * 12px
      */
     3: defaultConfigs.spacing[3],
@@ -227,6 +233,10 @@ export const defaultTheme: IUiLibraryTheme = {
      * 16px
      */
     4: defaultConfigs.spacing[4],
+    /**
+     * 10px
+     */
+    4.5: defaultConfigs.spacing[4.5],
     /**
      * 20px
      */
@@ -243,6 +253,10 @@ export const defaultTheme: IUiLibraryTheme = {
      * 40px
      */
     10: defaultConfigs.spacing[10],
+    /**
+     * 44px
+     */
+    11: defaultConfigs.spacing[11],
     /**
      * 48px
      */
@@ -276,9 +290,17 @@ export const defaultTheme: IUiLibraryTheme = {
      */
     32: defaultConfigs.spacing[32],
     /**
+     * 134px
+     */
+    34: defaultConfigs.spacing[34],
+    /**
      * 144px
      */
     36: defaultConfigs.spacing[36],
+    /**
+     * 156px
+     */
+    38: defaultConfigs.spacing[38],
     /**
      * 160px
      */
