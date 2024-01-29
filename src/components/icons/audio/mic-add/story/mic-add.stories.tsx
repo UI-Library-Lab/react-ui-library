@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import MicAdd from '../mic-add';
 
 const meta: Meta<typeof MicAdd> = {
-  title: 'Icons/Mic add',
+  title: 'Icons/Audio/Mic add',
   component: MicAdd,
   parameters: {
     design: {

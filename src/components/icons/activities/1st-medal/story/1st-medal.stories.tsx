@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Medal from '../1st-medal';
 
 const meta: Meta<typeof Medal> = {
-  title: 'Icons/1st medal',
+  title: 'Icons/Activities/1st medal',
   component: Medal,
   parameters: {
     design: {

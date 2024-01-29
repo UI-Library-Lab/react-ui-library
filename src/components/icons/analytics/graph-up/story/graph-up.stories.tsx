@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import GraphUp from '../graph-up';
 
 const meta: Meta<typeof GraphUp> = {
-  title: 'Icons/Graph up',
+  title: 'Icons/Analytics/Graph up',
   component: GraphUp,
   parameters: {
     design: {

@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React, { forwardRef } from 'react';
 import createUiLibraryTheme from './themeCreator';
 import { UiLibraryThemeProvider, useUiLibraryTheme } from './themeContext';
 /* -------------------------------------------------------------------------- */
@@ -10,20 +11,24 @@ import { UiLibraryThemeProvider, useUiLibraryTheme } from './themeContext';
  */
 export default function withThemeWrapper<
   COMPONENTS_PROPS extends JSX.IntrinsicAttributes,
->(Component: React.FunctionComponent<COMPONENTS_PROPS>) {
-  const WrappedComponent = (props: COMPONENTS_PROPS) => {
+>(Component: React.ForwardRefRenderFunction<any, COMPONENTS_PROPS>) {
+  const WrappedComponent = (props: COMPONENTS_PROPS, ref: any) => {
+    const ForwaredRefComponent = forwardRef(Component) as unknown as (
+      props: COMPONENTS_PROPS,
+      ref: any,
+    ) => JSX.Element;
     let theme = useUiLibraryTheme();
     if (!theme) {
       theme = createUiLibraryTheme();
       return (
         <UiLibraryThemeProvider theme={theme}>
-          <Component {...props} />
+          <ForwaredRefComponent ref={ref} {...props} />
         </UiLibraryThemeProvider>
       );
     }
 
-    return <Component {...props} />;
+    return <ForwaredRefComponent {...props} ref={ref} />;
   };
 
-  return WrappedComponent;
+  return forwardRef(WrappedComponent);
 }

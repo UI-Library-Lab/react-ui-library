@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import CloudCheck from '../cloud-check';
 
 const meta: Meta<typeof CloudCheck> = {
-  title: 'Icons/Cloud check',
+  title: 'Icons/Cloud/Cloud check',
   component: CloudCheck,
   parameters: {
     design: {

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import MicCheck from '../mic-check';
 
 const meta: Meta<typeof MicCheck> = {
-  title: 'Icons/Mic check',
+  title: 'Icons/Audio/Mic check',
   component: MicCheck,
   parameters: {
     design: {

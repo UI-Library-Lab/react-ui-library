@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import BookmarkCircled from '../bookmark-circled';
 
 const meta: Meta<typeof BookmarkCircled> = {
-  title: 'Icons/Bookmark circled',
+  title: 'Icons/Organization/Bookmark circled',
   component: BookmarkCircled,
   parameters: {
     design: {

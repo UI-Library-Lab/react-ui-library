@@ -2,13 +2,11 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tsConfigPaths from 'vite-tsconfig-paths'
 import dts from 'vite-plugin-dts'
-import EsLint from 'vite-plugin-linter'
+import { EsLinter, linterPlugin, TypeScriptLinter } from "vite-plugin-linter";
 import macrosPlugin from "vite-plugin-babel-macros"
 import { glob } from "glob";
 import { extname, relative, resolve } from "path";
 import { fileURLToPath } from "node:url";
-
-const { EsLinter, linterPlugin } = EsLint
 
 export default defineConfig((configEnv) => ({
   plugins: [
@@ -33,8 +31,8 @@ export default defineConfig((configEnv) => ({
       exclude: ["**/*.stories.tsx"] 
     }),
     linterPlugin({
-      include: ['./src/**/*.{ts,tsx}'],
-      linters: [new EsLinter({ configEnv })],
+      include: ["./src/**/*.ts", "./src/**/*.tsx"],
+      linters: [new EsLinter({ configEnv: configEnv }), new TypeScriptLinter()],
     }),
   ],
   server: {

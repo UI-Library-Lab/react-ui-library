@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import Archery from '../archery';
 
 const meta: Meta<typeof Archery> = {
-  title: 'Icons/Archery',
+  title: 'Icons/Activities/Archery',
   component: Archery,
   parameters: {
     design: {

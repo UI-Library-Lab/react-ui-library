@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import HistoricShield from '../historic-shield';
 
 const meta: Meta<typeof HistoricShield> = {
-  title: 'Icons/Historic shield',
+  title: 'Icons/Security/Historic shield',
   component: HistoricShield,
   parameters: {
     design: {

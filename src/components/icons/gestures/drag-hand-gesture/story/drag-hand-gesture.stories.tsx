@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import DragHandGesture from '../drag-hand-gesture';
 
 const meta: Meta<typeof DragHandGesture> = {
-  title: 'Icons/Drag hand gesture',
+  title: 'Icons/Gestures/Drag hand gesture',
   component: DragHandGesture,
   parameters: {
     design: {

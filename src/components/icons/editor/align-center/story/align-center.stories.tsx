@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import AlignCenter from '../align-center';
 
 const meta: Meta<typeof AlignCenter> = {
-  title: 'Icons/Align center',
+  title: 'Icons/Editor/Align center',
   component: AlignCenter,
   parameters: {
     design: {

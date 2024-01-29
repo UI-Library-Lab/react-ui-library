@@ -1,8 +1,8 @@
+import Button from '~/components/inputs/button/Button';
 import { DownloadSquareOutline } from './components/icons';
-import Button from './components/inputs/button/Button';
 import './styles/globalStyles.css';
 import createUiLibraryTheme from './theme/themeCreator';
-import { paletteModes } from './utils/configs/constants/defaultConfigs';
+import { paletteModes } from './utils/configs/constants/default-configs';
 /* --------------------------------- exports -------------------------------- */
 export {
   type ICustomUiLibraryTheme,
