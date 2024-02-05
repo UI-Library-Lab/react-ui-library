@@ -3,7 +3,7 @@ import { Sizes } from '~/components/common/common-enums';
 import { ReactNode } from 'react';
 
 /* ---------------------------------- Enums --------------------------------- */
-export enum ButtonTypes {
+export enum ButtonVariants {
   PRIMARY = 'Primary',
   SECONDARY = 'Secondary',
   TERTIARY = 'Tertiary',
@@ -21,7 +21,7 @@ export interface IButtonProps extends ICommonProps<HTMLButtonElement> {
    *
    * Default: Primary
    */
-  types?: `${ButtonTypes}`;
+  variants?: `${ButtonVariants}`;
   /**
    * How large should the button be?
    *

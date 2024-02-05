@@ -10,7 +10,7 @@ import {
   commonTypography,
 } from '~/components/common/common-styles';
 import {
-  ButtonTypes,
+  ButtonVariants,
   IButtonProps,
 } from '~/components/inputs/button/i-button-props';
 import {
@@ -265,22 +265,24 @@ const linkErrorButtonType = css<IStyledButton>`
 
 const buttonTypeStyle = (destructive: boolean) =>
   ({
-    [ButtonTypes.PRIMARY]: primaryButtonType,
-    [ButtonTypes.SECONDARY]: secondaryButtonType,
-    [ButtonTypes.TERTIARY]: destructive ? tertiaryError : tertiaryButtonType,
-    [ButtonTypes.TERTIARY_GRAY]: destructive
+    [ButtonVariants.PRIMARY]: primaryButtonType,
+    [ButtonVariants.SECONDARY]: secondaryButtonType,
+    [ButtonVariants.TERTIARY]: destructive ? tertiaryError : tertiaryButtonType,
+    [ButtonVariants.TERTIARY_GRAY]: destructive
       ? tertiaryError
       : tertiaryGrayButtonType,
-    [ButtonTypes.GHOST]: destructive ? ghostErrorButtonType : ghostButtonType,
-    [ButtonTypes.GHOST_GRAY]: destructive
+    [ButtonVariants.GHOST]: destructive
+      ? ghostErrorButtonType
+      : ghostButtonType,
+    [ButtonVariants.GHOST_GRAY]: destructive
       ? ghostErrorButtonType
       : ghostGrayButtonType,
-    [ButtonTypes.LINK]: destructive ? linkErrorButtonType : linkButtonType,
-    [ButtonTypes.LINK_GRAY]: destructive
+    [ButtonVariants.LINK]: destructive ? linkErrorButtonType : linkButtonType,
+    [ButtonVariants.LINK_GRAY]: destructive
       ? linkErrorButtonType
       : linkGrayButtonType,
   } as Record<
-    `${ButtonTypes}`,
+    `${ButtonVariants}`,
     FlattenInterpolation<ThemedStyledProps<IStyledButton, DefaultTheme>>
   >);
 
@@ -347,8 +349,8 @@ export const StyledButton = styled.button<IStyledButton>`
   // Sizes css
   ${buttonSizesStyles}
   // types css
-  ${({ types, destructive }) =>
-    types && buttonTypeStyle(destructive || false)[types]}
+  ${({ variants, destructive }) =>
+    variants && buttonTypeStyle(destructive || false)[variants]}
   border-radius: ${({ theme }) => theme.spacing[1]};
   cursor: ${({ disabled }) => (disabled ? 'auto' : 'pointer')};
   display: flex;

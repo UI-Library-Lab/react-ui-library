@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import {
-  ButtonTypes,
+  ButtonVariants,
   IButtonProps,
 } from '~/components/inputs/button/i-button-props';
 import { Sizes } from '~/components/common/common-enums';
@@ -18,7 +18,7 @@ export default {
   args: {
     label: 'Default Label',
     destructive: false,
-    types: ButtonTypes.PRIMARY,
+    types: ButtonVariants.PRIMARY,
     size: Sizes.MEDIUM,
     disabled: false,
     expanded: false,
@@ -29,7 +29,7 @@ export default {
     },
     types: {
       control: 'radio',
-      options: Object.values(ButtonTypes),
+      options: Object.values(ButtonVariants),
     },
     size: {
       control: 'radio',
