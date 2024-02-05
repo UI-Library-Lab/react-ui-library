@@ -8,12 +8,12 @@ import { StyledButton } from './style';
  */
 const Button = withThemeWrapper<IButtonProps>(
   (props: IButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
-    const { label, LeadingIcon, TrailingIcon } = props;
+    const { label, Leading, Trailing } = props;
     return (
       <StyledButton {...props} ref={ref}>
-        {LeadingIcon}
+        {Leading}
         {label}
-        {TrailingIcon}
+        {Trailing}
       </StyledButton>
     );
   },

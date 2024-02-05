@@ -56,8 +56,8 @@ export const Primary: StoryObj<Meta> = {
     return (
       <Button
         {...(props as IButtonProps)}
-        LeadingIcon={<Circle />}
-        TrailingIcon={<Circle />}
+        Leading={<Circle />}
+        Trailing={<Circle />}
       />
     );
   },
