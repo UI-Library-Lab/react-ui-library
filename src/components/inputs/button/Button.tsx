@@ -1,5 +1,5 @@
 import { type ForwardedRef } from 'react';
-import withThemeWrapper from '~/theme/withThemeWrapper';
+import withThemeWrapper from '~/theme/with-theme-wrapper';
 import { type IButtonProps } from './i-button-props';
 import { StyledButton } from './style';
 /* -------------------------------------------------------------------------- */
@@ -8,12 +8,12 @@ import { StyledButton } from './style';
  */
 const Button = withThemeWrapper<IButtonProps>(
   (props: IButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
-    const { label, LeadingIcon, TrailingIcon } = props;
+    const { label, Leading, Trailing } = props;
     return (
       <StyledButton {...props} ref={ref}>
-        {LeadingIcon}
+        {Leading}
         {label}
-        {TrailingIcon}
+        {Trailing}
       </StyledButton>
     );
   },

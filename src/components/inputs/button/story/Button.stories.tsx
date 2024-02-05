@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import {
-  ButtonTypes,
+  ButtonVariants,
   IButtonProps,
 } from '~/components/inputs/button/i-button-props';
 import { Sizes } from '~/components/common/common-enums';
@@ -18,7 +18,7 @@ export default {
   args: {
     label: 'Default Label',
     destructive: false,
-    types: ButtonTypes.PRIMARY,
+    variants: ButtonVariants.PRIMARY,
     size: Sizes.MEDIUM,
     disabled: false,
     expanded: false,
@@ -27,9 +27,9 @@ export default {
     disabled: {
       control: 'boolean',
     },
-    types: {
+    variants: {
       control: 'radio',
-      options: Object.values(ButtonTypes),
+      options: Object.values(ButtonVariants),
     },
     size: {
       control: 'radio',
@@ -56,8 +56,8 @@ export const Primary: StoryObj<Meta> = {
     return (
       <Button
         {...(props as IButtonProps)}
-        LeadingIcon={<Circle />}
-        TrailingIcon={<Circle />}
+        Leading={<Circle />}
+        Trailing={<Circle />}
       />
     );
   },
