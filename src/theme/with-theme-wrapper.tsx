@@ -1,7 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { forwardRef } from 'react';
-import createUiLibraryTheme from './themeCreator';
-import { UiLibraryThemeProvider, useUiLibraryTheme } from './themeContext';
+import { createUiLibraryTheme } from '~/index';
+import {
+  UiLibraryThemeProvider,
+  useUiLibraryTheme,
+} from '~/theme/theme-context';
 /* -------------------------------------------------------------------------- */
 /**
  * handles the theme provider and passing the theme configs to the

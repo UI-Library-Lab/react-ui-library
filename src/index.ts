@@ -1,18 +1,20 @@
+import DownloadSquareOutline from '~/components/icons/actions/download-square-outline/download-square-outline';
 import Button from '~/components/inputs/button/Button';
-import { DownloadSquareOutline } from './components/icons';
-import './styles/globalStyles.css';
-import createUiLibraryTheme from './theme/themeCreator';
-import { paletteModes } from './utils/configs/constants/default-configs';
-/* --------------------------------- exports -------------------------------- */
+import '~/styles/globalStyles.css';
+/* -------------------------------------------------------------------------- */
+/*                                   Exports                                  */
+/* -------------------------------------------------------------------------- */
+/* ---------------------------------- core ---------------------------------- */
 export {
   type ICustomUiLibraryTheme,
   type IUiLibraryTheme,
-} from './utils/configs/protocols';
+} from '@ui-library-lab/core-js';
+export { createUiLibraryTheme, paletteModes } from '@ui-library-lab/core-js';
+
 export {
   UiLibraryThemeProvider,
   useUiLibraryTheme,
-} from './theme/themeContext';
-export { createUiLibraryTheme };
-export { Button };
-export { paletteModes };
+} from '~/theme/theme-context';
+/* ------------------------------- Components ------------------------------- */
 export { DownloadSquareOutline };
+export { Button };

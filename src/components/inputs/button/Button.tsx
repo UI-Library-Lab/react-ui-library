@@ -1,5 +1,5 @@
 import { type ForwardedRef } from 'react';
-import withThemeWrapper from '~/theme/withThemeWrapper';
+import withThemeWrapper from '~/theme/with-theme-wrapper';
 import { type IButtonProps } from './i-button-props';
 import { StyledButton } from './style';
 /* -------------------------------------------------------------------------- */

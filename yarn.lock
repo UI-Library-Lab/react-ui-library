@@ -4591,6 +4591,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ui-library-lab/core-js@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@ui-library-lab/core-js@npm:0.0.3"
+  checksum: 0f875d733f96417bde7d4e8222d3655af6f0e39cbb66c7350c36d1de4c249914a4347e50526ca688a23e2060a109d3f9d315ef4c89b082f14284468c8e711a78
+  languageName: node
+  linkType: hard
+
 "@ui-library-lab/ui-library-storybook@workspace:.":
   version: 0.0.0-use.local
   resolution: "@ui-library-lab/ui-library-storybook@workspace:."
@@ -4617,6 +4624,7 @@ __metadata:
     "@types/styled-components": "npm:^5.1.26"
     "@typescript-eslint/eslint-plugin": "npm:^5.54.1"
     "@typescript-eslint/parser": "npm:^5.54.1"
+    "@ui-library-lab/core-js": "npm:^0.0.3"
     "@vitejs/plugin-react": "npm:^3.1.0"
     autoprefixer: "npm:^10.4.14"
     babel-loader: "npm:^8.3.0"

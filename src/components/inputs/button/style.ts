@@ -13,7 +13,10 @@ import {
   ButtonTypes,
   IButtonProps,
 } from '~/components/inputs/button/i-button-props';
-import { NTypographyConfigs, SpacingConfigs } from '~/utils/configs/protocols';
+import {
+  type NTypographyConfigs,
+  type SpacingConfigs,
+} from '@ui-library-lab/core-js';
 
 /* -------------------------------------------------------------------------- */
 /*                                  Interface                                 */

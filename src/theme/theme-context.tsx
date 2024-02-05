@@ -1,6 +1,6 @@
+import { IUiLibraryTheme } from '@ui-library-lab/core-js';
 import { PropsWithChildren } from 'react';
 import { DefaultTheme, ThemeProvider, useTheme } from 'styled-components';
-import { IUiLibraryTheme } from '..';
 /* -------------------------------- interface ------------------------------- */
 interface IUiLibraryThemeProps {
   theme: IUiLibraryTheme;
