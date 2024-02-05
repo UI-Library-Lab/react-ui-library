@@ -18,7 +18,7 @@ export default {
   args: {
     label: 'Default Label',
     destructive: false,
-    types: ButtonVariants.PRIMARY,
+    variants: ButtonVariants.PRIMARY,
     size: Sizes.MEDIUM,
     disabled: false,
     expanded: false,
@@ -27,7 +27,7 @@ export default {
     disabled: {
       control: 'boolean',
     },
-    types: {
+    variants: {
       control: 'radio',
       options: Object.values(ButtonVariants),
     },
