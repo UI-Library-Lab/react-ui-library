@@ -1,24 +1,9 @@
-import { DARK_MODE_EVENT_NAME } from 'storybook-dark-mode';
-import React, { useEffect, useState } from 'react'
-import { createUiLibraryTheme, paletteModes, UiLibraryThemeProvider } from '../src/index';
-import {addons} from '@storybook/addons';
-
-const channel = addons.getChannel();
+import React from 'react'
+import { createUiLibraryTheme, UiLibraryThemeProvider } from '../src/index';
 
 export const decorators = [
   (Story) => {
-      const [isDark, setDark] = useState(false);
-
-    useEffect(() => {
-      channel.on(DARK_MODE_EVENT_NAME, setDark);
-      return () => channel.off(DARK_MODE_EVENT_NAME, setDark);
-    }, [channel, setDark]);
-
-    const customTheme = createUiLibraryTheme({
-      palette: {
-        mode: isDark ? paletteModes.DARK : paletteModes.LIGHT
-      }
-    })
+    const customTheme = createUiLibraryTheme()
 
     return (
       <UiLibraryThemeProvider theme={customTheme}>
