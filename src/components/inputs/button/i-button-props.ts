@@ -35,11 +35,11 @@ export interface IButtonProps extends ICommonProps<HTMLButtonElement> {
   /**
    * Icon to show before button
    */
-  LeadingIcon?: ReactNode;
+  Leading?: ReactNode;
   /**
    * Icon to show after button
    */
-  TrailingIcon?: ReactNode;
+  Trailing?: ReactNode;
   /**
    * Is error shape
    */
